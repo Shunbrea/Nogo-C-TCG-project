@@ -1,6 +1,5 @@
 #include <string>
 #include <iostream>
-#include "tree.h"
 #include "board.h"
 #include "episode.h"
 
@@ -12,15 +11,34 @@ int main()
     cout << ep.state() << endl;
     // cout << ep.state().info().who_take_turns << endl;
 
-    McstTree thetree(100, ep.state());
-    // cout << thetree.nodes_limit << endl;
+    MctsTree thetree(1000);
+    action::place move;
 
-    // cout << thetree.root.Numpossiblemoves() << endl;
+    for (size_t i=0; i<5; i++){
+        thetree.deleteNodes();
+        thetree.setroot(ep.state());
+        cout << thetree.root->state << endl;
+
+        move = thetree.run();
+        cout << move << endl;
+        ep.apply_action(move);
+        cout << ep.state() << endl;
+
+        // thetree.deleteNodes();
+        // thetree.setroot(ep.state());
+        // cout << thetree.root->state << endl;
+        
+        // move = thetree.run();
+        // cout << move << endl;
+        // ep.apply_action(move);
+        // cout << ep.state() << endl;
+    }
     
-    Node* select_node = &thetree.root;
 
-    // Node* select_node = thetree.slection();
-    Node* expan_node = thetree.expansion(select_node);
-    bool win = thetree.rollout(expan_node);
-    thetree.backpropagation(expan_node, win);
+    // MctsTree thetree(1000, ep.state());
+    // action::place move = thetree.run();
+
+    // cout << move << endl;
+    // ep.apply_action(move);
+    // cout << ep.state() << endl;
 }

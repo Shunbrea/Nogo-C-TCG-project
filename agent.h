@@ -17,6 +17,7 @@
 #include <fstream>
 #include "board.h"
 #include "action.h"
+#include "tree.h"
 
 class agent {
 public:
@@ -67,13 +68,13 @@ protected:
 };
 
 /**
- * random player for both side
- * put a legal piece randomly
+ * player for both side
+ * write by eric lin
  */
 class player : public random_agent {
 public:
-	player(const std::string& args = "") : random_agent("name=random role=unknown " + args),
-		space(board::size_x * board::size_y), who(board::empty) {
+	player(const std::string& args = "") : random_agent("role=unknown timeout=1" + args),
+		space(board::size_x * board::size_y), who(board::empty), thetree(std::stoi(property("timeout"))) {
 		if (name().find_first_of("[]():; ") != std::string::npos)
 			throw std::invalid_argument("invalid name: " + name());
 		if (role() == "black") who = board::black;
@@ -81,53 +82,33 @@ public:
 		if (who == board::empty)
 			throw std::invalid_argument("invalid role: " + role());
 		for (size_t i = 0; i < space.size(); i++)
-			space[i] = action::place(i, who);
+			space[i] = action::place(i, who);	
 	}
 
 	virtual action take_action(const board& state) {
-		std::shuffle(space.begin(), space.end(), engine);
-		for (const action::place& move : space) {
-			board after = state;
-			if (move.apply(after) == board::legal)
-				return move;
+		cerr << property("search") << endl;
+		if (property("search") == "MCTS") {
+			cerr << "reset" << endl;
+			thetree.deleteNodes();
+			cerr << "setroot" << endl;
+			thetree.setroot(state);
+			action move = thetree.run();
+			cerr << "agent action " << move << endl;
+			return move;
+			// return action();
+		} else {
+			std::shuffle(space.begin(), space.end(), engine);
+			for (const action::place& move : space) {
+				board after = state;
+				if (move.apply(after) == board::legal)
+					return move;
+			}
+			return action();
 		}
-		return action();
 	}
 
 private:
 	std::vector<action::place> space;
 	board::piece_type who;
-};
-
-/**
- * search player 
- * write by eric lin
- */
-class search_player : public random_agent {
-public:
-	search_player(const std::string& args = "") : random_agent("name=search role=unknown " + args),
-		space(board::size_x * board::size_y), who(board::empty) {
-		if (name().find_first_of("[]():; ") != std::string::npos)
-			throw std::invalid_argument("invalid name: " + name());
-		if (role() == "black") who = board::black;
-		if (role() == "white") who = board::white;
-		if (who == board::empty)
-			throw std::invalid_argument("invalid role: " + role());
-		for (size_t i = 0; i < space.size(); i++)
-			space[i] = action::place(i, who);
-	}
-
-	virtual action take_action(const board& state) {
-		std::shuffle(space.begin(), space.end(), engine);
-		for (const action::place& move : space) {
-			board after = state;
-			if (move.apply(after) == board::legal)
-				return move;
-		}
-		return action();
-	}
-
-private:
-	std::vector<action::place> space;
-	board::piece_type who;
+	MctsTree thetree;
 };

@@ -14,7 +14,7 @@ public:
     //     board& state = state;
     // }
     Node(board state) : state(state) {
-        // TO.DO
+        setPossibleMoves();
     };
 
     // parent node of the node
@@ -34,10 +34,9 @@ public:
 
     // the state of this node
     const board state;
-
+    
     // set the array with possible moves
     vector<action::place> possiblemoves;
-    
     void setPossibleMoves() {
         for (size_t i = 0; i < board::size_x * board::size_y; i++){
             board after = state;
@@ -53,6 +52,8 @@ public:
     }
 
     // expansion of a child node
+    action::place takemove = action();
+
     Node* addChild(action::place move) {
         // create new node with its game state and possible moves
         Node *child;
@@ -62,7 +63,7 @@ public:
         
         child = new Node(after);
 
-        child->setPossibleMoves();
+        // child->setPossibleMoves();
         child->depth++;
 
         // assign the new child node as a child node of the actual node
@@ -70,6 +71,7 @@ public:
 
         // assign actual node as parent node
         child->parent_node = this;
+        child->takemove = move;
         // cout << child->state << endl;
 
         return child;
@@ -84,7 +86,9 @@ public:
     // return randomly a possible move and thereupon erase it from the list of possible moves
     action::place* getRandomMove() {       
         std::shuffle(std::begin(possiblemoves), std::end(possiblemoves), engine); 
-        return &possiblemoves[0];
+        action::place* mv = &possiblemoves.back();
+        possiblemoves.pop_back();
+        return mv;
     }
 
     board::piece_type random_rollout() {
@@ -117,7 +121,9 @@ public:
         if (win) {
             wins++;
         };
-        parent_node->backpropagation(win);
+        if (depth > 0) {
+            parent_node->backpropagation(win);
+        }
     }
 };
 

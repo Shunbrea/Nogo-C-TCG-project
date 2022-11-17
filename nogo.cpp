@@ -77,15 +77,19 @@ int main(int argc, const char* argv[]) {
 			std::cerr << "======== Game " << stats.step() << " ========" << std::endl;
 			black.open_episode("~:" + white.name());
 			white.open_episode(black.name() + ":~");
-
+			
 			stats.open_episode(black.name() + ":" + white.name());
 			episode& game = stats.back();
 			while (true) {
 				agent& who = game.take_turns(black, white);
+				cerr << "get who" << endl;
 				action move = who.take_action(game.state());
+				cerr << "get move" << endl;
 				std::cerr << game.state() << "#" << game.step() << " " << who.name() << ": " << move << std::endl;
 				if (game.apply_action(move) != true) break;
+				cerr << "apply" << endl;
 				if (who.check_for_win(game.state())) break;
+				cerr << "check" << endl;
 			}
 			agent& win = game.last_turns(black, white);
 			stats.close_episode(win.name());
