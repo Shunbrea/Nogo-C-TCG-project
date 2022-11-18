@@ -15,6 +15,7 @@
 #include <type_traits>
 #include <algorithm>
 #include <fstream>
+#include <ctime>
 #include "board.h"
 #include "action.h"
 #include "tree.h"
@@ -71,44 +72,77 @@ protected:
  * player for both side
  * write by eric lin
  */
-class player : public random_agent {
+class player : public agent {
 public:
-	player(const std::string& args = "") : random_agent("role=unknown timeout=1" + args),
-		space(board::size_x * board::size_y), who(board::empty), thetree(std::stoi(property("timeout"))) {
+	enum algorithms { random = 0u, mcts = 1u, alphabeta = 2u };
+	virtual std::string search() const { return property("search"); }
+
+	player(const std::string& args = "") : agent("role=unknown " + args),
+		space(board::size_x * board::size_y), who(board::empty) {
 		if (name().find_first_of("[]():; ") != std::string::npos)
 			throw std::invalid_argument("invalid name: " + name());
 		if (role() == "black") who = board::black;
 		if (role() == "white") who = board::white;
 		if (who == board::empty)
 			throw std::invalid_argument("invalid role: " + role());
-		for (size_t i = 0; i < space.size(); i++)
-			space[i] = action::place(i, who);	
+		
+		// construct player with algorithms
+		if (meta.find("search") == meta.end()){
+
+			// player with random algorithms
+			algo = algorithms::random;
+			cerr << "player " << role() << " : use random" << endl;
+			if (meta.find("seed") != meta.end())
+				engine.seed(int(meta["seed"]));
+			for (size_t i = 0; i < space.size(); i++)
+				space[i] = action::place(i, who);
+
+		} else if (search() == "MCTS") {
+
+			// player with MCTS algorithms
+			algo = algorithms::mcts;
+			cerr << "player " << role() << " : use " << search() << endl;
+
+			if (meta.find("timeout") != meta.end()) {
+				MctsTree thetree(std::stoi(property("timeout")));
+			} else {
+				MctsTree thetree;
+			}
+		} else if (search() == "alpha-beta") {
+			// player with alpha-beta algorithms
+			algo = algorithms::alphabeta;
+		} else {
+			// TODO
+		}
 	}
 
 	virtual action take_action(const board& state) {
-		cerr << property("search") << endl;
-		if (property("search") == "MCTS") {
-			cerr << "reset" << endl;
-			thetree.deleteNodes();
-			cerr << "setroot" << endl;
-			thetree.setroot(state);
-			action move = thetree.run();
-			cerr << "agent action " << move << endl;
-			return move;
-			// return action();
-		} else {
-			std::shuffle(space.begin(), space.end(), engine);
-			for (const action::place& move : space) {
-				board after = state;
-				if (move.apply(after) == board::legal)
-					return move;
-			}
-			return action();
+		switch (algo) {
+			case (mcts):
+				thetree.deleteNodes();
+				// cerr << "delete" << endl;
+				thetree.setroot(state);
+				// cerr << "set" << endl;
+				return thetree.run();
+			case (random):
+				std::shuffle(space.begin(), space.end(), engine);
+				for (const action::place& move : space) {
+					board after = state;
+					if (move.apply(after) == board::legal)
+						return move;
+				}
+				return action();
+			default:
+				return action();
 		}
 	}
 
 private:
 	std::vector<action::place> space;
 	board::piece_type who;
+	algorithms algo;
 	MctsTree thetree;
+
+protected:
+	std::default_random_engine engine;
 };
