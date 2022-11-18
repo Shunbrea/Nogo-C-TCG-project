@@ -14,9 +14,12 @@ public:
     Node** nodes;
     
     // array of pointers to keep track of each created node object
-    MctsTree(const int nodes_limit): nodes_limit(nodes_limit) {
+    MctsTree(const int nodes_limit = 100): nodes_limit(nodes_limit) {
         nodes = new Node*[nodes_limit];
     };
+    MctsTree(const MctsTree& t): nodes_limit(t.nodes_limit) {
+        nodes = new Node*[nodes_limit];
+    }
 
     Node* root = 0;
     void setroot(const board& root_board){
@@ -24,7 +27,9 @@ public:
     }
     
     action::place run() {
-        for  (size_t i = 0; i < (nodes_limit); i++) {
+        // cerr << "root move =" << root->Numpossiblemoves() << endl;
+        if (root->Numpossiblemoves() == 0) return action();
+        for (size_t i = 0; i < nodes_limit; i++){
             Node* select_node = slection();
             // cout << "The select node depth = " << select_node->depth << endl;
 
@@ -34,14 +39,10 @@ public:
             bool win = rollout(expan_node);
             // cout << "The rollout result = " << win << endl;
 
-            // cout << "before backpropagation, root visits = " << root->visits << endl;
-            // cout << "before backpropagation, root wins = " << root->wins << endl;
+            // cout << "before backpropagation, root= " << root->wins << "/" << root->visits << endl;
             backpropagation(expan_node, win);
-            // cout << "after backpropagation, root visits = " << root->visits << endl;
-            // cout << "after backpropagation, root wins = " << root->wins << endl;
-            // cout << "after backpropagation, expansion node visits = " << expan_node->visits << endl;
-            // cout << "after backpropagation, expansion node wins = " << expan_node->wins << endl;
-        } 
+            // cout << "after backpropagation, root= " << root->wins << "/" << root->visits << endl;
+        }
         std::vector<double> vec;
         for (const Node* c : root->child_nodes){
             double r = double(c->wins) / double(c->visits) ;
@@ -55,17 +56,19 @@ public:
 
 
     Node* slection() {
-        // cout << "here is slection" << endl;
+        // cerr << "here is slection" << endl;
         int level;
         Node* select_node;
 
         level = root->depth;
         select_node = slection_one(root);
+        // cerr << level << "|" << select_node->depth << endl;
         while (select_node->depth != level){
             level = select_node->depth;
             select_node = slection_one(select_node);
+            // cerr << level << "|" << select_node->depth << endl;
         }
-        // cout << "here is slection end" << endl;
+        // cerr << "here is slection end" << endl;
         return select_node;
     }
 
@@ -79,18 +82,23 @@ public:
         if (here_node->Numpossiblemoves() > 0) {
             return here_node;
         } else {
-            std::vector<double> vec;
-            for (const Node* n : here_node->child_nodes){
-                double v = (n->wins/n->visits)+sqrt(2*log10(here_node->visits)/n->visits);
-                vec.push_back(v);
+            if (here_node->child_nodes.size() == 0) {
+                return here_node;
+            } else {
+                std::vector<double> vec;
+                for (const Node* n : here_node->child_nodes){
+                    double v = (n->wins/n->visits)+sqrt(2*log10(here_node->visits)/n->visits);
+                    vec.push_back(v);
+                }
+                int max_idx = arg_max(vec);
+                return here_node->child_nodes[max_idx];
             }
-            int max_idx = arg_max(vec);
-            return here_node->child_nodes[max_idx];
         }
         // cout << "here is slection end" << endl;
     }
     
     Node* expansion(Node* select_node) {
+        if (select_node->Numpossiblemoves() == 0) return select_node;
         action::place* move = select_node->getRandomMove();
         Node* child = select_node->addChild(*move);
         addNode(child);
@@ -116,13 +124,13 @@ public:
 
     // delete all objects the pointers are pointing on
     void deleteNodes() {
-        cerr << amount_nodes << endl;
+        // cerr << amount_nodes << endl;
         for (int i = 0; i < amount_nodes; i++) {
             delete nodes[i];
             nodes[i] = 0;
         }
         amount_nodes = 0;
-        cerr << root << endl;
+        // cerr << root << endl;
         delete root;
         // root = 0;
     }
