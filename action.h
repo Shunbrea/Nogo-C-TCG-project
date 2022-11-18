@@ -17,6 +17,8 @@ class action {
 public:
 	action(unsigned code = -1u) : code(code) {}
 	action(const action& a) : code(a.code) {}
+	bool operator ==(const action& a) const { return code == a.code; }
+	bool operator !=(const action& a) const { return !(*this == a); }
 	virtual ~action() {}
 
 	class place; // create a placing action with position and a color

@@ -10,13 +10,13 @@ public:
     
     // amount of nodes that are created and added to the tree with one mcts run
     int amount_nodes = 0;
-    const unsigned int nodes_limit;
+    unsigned int nodes_limit;
     Node** nodes;
     
     // array of pointers to keep track of each created node object
-    MctsTree(const int nodes_limit = 100): nodes_limit(nodes_limit) {
+    MctsTree(int n = 100): nodes_limit(n) {
         nodes = new Node*[nodes_limit];
-    };
+    }
     MctsTree(const MctsTree& t): nodes_limit(t.nodes_limit) {
         nodes = new Node*[nodes_limit];
     }
@@ -27,9 +27,10 @@ public:
     }
     
     action::place run() {
+        size_t i;
         // cerr << "root move =" << root->Numpossiblemoves() << endl;
         if (root->Numpossiblemoves() == 0) return action();
-        for (size_t i = 0; i < nodes_limit; i++){
+        for (i = 0; i < nodes_limit; i++){
             Node* select_node = slection();
             // cout << "The select node depth = " << select_node->depth << endl;
 
@@ -51,6 +52,7 @@ public:
         }
         int max_idx = arg_max(vec);
         action::place move = root->child_nodes[max_idx]->takemove;
+        // cerr << "Simulate " << i << " times, Move = " << move << endl;
         return move;
     }
 

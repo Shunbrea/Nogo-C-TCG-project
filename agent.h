@@ -102,11 +102,9 @@ public:
 			// player with MCTS algorithms
 			algo = algorithms::mcts;
 			cerr << "player " << role() << " : use " << search() << endl;
-
 			if (meta.find("timeout") != meta.end()) {
-				MctsTree thetree(std::stoi(property("timeout")));
-			} else {
-				MctsTree thetree;
+				// cerr << std::stoi(property("timeout")) << endl;
+				thetree = std::stoi(property("timeout"));
 			}
 		} else if (search() == "alpha-beta") {
 			// player with alpha-beta algorithms
