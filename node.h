@@ -82,48 +82,5 @@ public:
         return parent_node;
     }
 
-    std::default_random_engine engine;
-    // return randomly a possible move and thereupon erase it from the list of possible moves
-    action::place* getRandomMove() {       
-        std::shuffle(std::begin(possiblemoves), std::end(possiblemoves), engine); 
-        action::place* mv = &possiblemoves.back();
-        possiblemoves.pop_back();
-        return mv;
-    }
-
-    board::piece_type random_rollout() {
-        size_t i;
-        board temp;
-        board after;
-        after = state;
-        std::array<int, board::size_x * board::size_y> pos;
-        std::iota(pos.begin(), pos.end(), 1);
-        std::shuffle(pos.begin(), pos.end(), engine);
-        while (true){
-            for (i = 0; i < board::size_x * board::size_y; i++){
-                temp = after;
-                action::place move(pos[i], after.info().who_take_turns);
-                if (move.apply(temp) == board::legal){
-                    after = temp;
-                    break;
-                }
-            }
-            if (i == board::size_x * board::size_y){
-                break;
-            }
-        }
-        // cout << after << endl;
-        return after.info().who_take_turns;
-    }
-
-    void backpropagation(bool win){
-        visits++;
-        if (win) {
-            wins++;
-        };
-        if (depth > 0) {
-            parent_node->backpropagation(win);
-        }
-    }
 };
 

@@ -17,28 +17,20 @@ int main()
     for (size_t i=0; i<5; i++){
         thetree.deleteNodes();
         thetree.setroot(ep.state());
+        cout << thetree.who << endl;
         cout << thetree.root->state << endl;
 
-        move = thetree.run();
+        move = thetree.uctsearch();
         cout << move << endl;
         ep.apply_action(move);
         cout << ep.state() << endl;
-
-        // thetree.deleteNodes();
-        // thetree.setroot(ep.state());
-        // cout << thetree.root->state << endl;
-        
-        // move = thetree.run();
-        // cout << move << endl;
-        // ep.apply_action(move);
-        // cout << ep.state() << endl;
     }
-    
-
     // MctsTree thetree(1000, ep.state());
     // action::place move = thetree.run();
 
     // cout << move << endl;
     // ep.apply_action(move);
     // cout << ep.state() << endl;
+
+    return 0;
 }

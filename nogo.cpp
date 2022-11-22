@@ -85,7 +85,7 @@ int main(int argc, const char* argv[]) {
 				// cerr << "get who" << endl;
 				action move = who.take_action(game.state());
 				// cerr << "get move" << endl;
-				std::cerr << game.state() << "#" << game.step() << " " << who.name() << ": " << move << std::endl;
+				// std::cerr << game.state() << "#" << game.step() << " " << who.name() << ": " << move << std::endl;
 				if (game.apply_action(move) != true) break;
 				// cerr << "apply" << endl;
 				if (who.check_for_win(game.state())) break;

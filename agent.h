@@ -18,7 +18,7 @@
 #include <ctime>
 #include "board.h"
 #include "action.h"
-#include "tree.h"
+#include "mctstree.h"
 
 class agent {
 public:
@@ -92,6 +92,8 @@ public:
 			// player with random algorithms
 			algo = algorithms::random;
 			cerr << "player " << role() << " : use random" << endl;
+
+			// parameter setting
 			if (meta.find("seed") != meta.end())
 				engine.seed(int(meta["seed"]));
 			for (size_t i = 0; i < space.size(); i++)
@@ -102,10 +104,15 @@ public:
 			// player with MCTS algorithms
 			algo = algorithms::mcts;
 			cerr << "player " << role() << " : use " << search() << endl;
+
+			// parameter setting
 			if (meta.find("timeout") != meta.end()) {
 				// cerr << std::stoi(property("timeout")) << endl;
 				thetree = std::stoi(property("timeout"));
 			}
+			if (meta.find("seed") != meta.end())
+				thetree.setseed(int(meta["seed"]));
+
 		} else if (search() == "alpha-beta") {
 			// player with alpha-beta algorithms
 			algo = algorithms::alphabeta;
@@ -121,7 +128,7 @@ public:
 				// cerr << "delete" << endl;
 				thetree.setroot(state);
 				// cerr << "set" << endl;
-				return thetree.run();
+				return thetree.uctsearch();
 			case (random):
 				std::shuffle(space.begin(), space.end(), engine);
 				for (const action::place& move : space) {
