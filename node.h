@@ -45,6 +45,7 @@ public:
     vector<action::place> legalmoves;
     vector<action::place> possiblemoves;
     size_t legal_count;
+    
     void setlegalMoves() {
         for (size_t i = 0; i < board::size_x * board::size_y; i++){
             board after = state;
@@ -54,6 +55,7 @@ public:
             }
         }
         legal_count = legalmoves.size();
+        std::shuffle(legalmoves.begin(), legalmoves.end(), engine);
         possiblemoves = legalmoves;
     }
 
@@ -91,5 +93,9 @@ public:
         return parent_node;
     }
 
+private:
+    static std::default_random_engine engine;
+
 };
 
+std::default_random_engine Node::engine;

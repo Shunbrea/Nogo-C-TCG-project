@@ -18,7 +18,8 @@
 #include <ctime>
 #include "board.h"
 #include "action.h"
-#include "mctstree.h"
+// #include "mctstree.h"
+#include "mcrave.h"
 
 class agent {
 public:
@@ -74,7 +75,7 @@ protected:
  */
 class player : public agent {
 public:
-	enum algorithms { random = 0u, mcts = 1u, alphabeta = 2u };
+	enum algorithms { random = 0u, mcts = 1u, alphabeta = 2u, rave = 3u };
 	virtual std::string search() const { return property("search"); }
 
 	player(const std::string& args = "") : agent("role=unknown " + args),
@@ -106,16 +107,20 @@ public:
 			cerr << "player " << role() << " : use " << search() << endl;
 
 			// parameter setting
-			if (meta.find("timeout") != meta.end()) {
-				// cerr << std::stoi(property("timeout")) << endl;
-				thetree = std::stoi(property("timeout"));
-			}
 			if (meta.find("seed") != meta.end())
-				thetree.setseed(int(meta["seed"]));
+				MCtree.setseed(int(meta["seed"]));
 
 		} else if (search() == "alpha-beta") {
 			// player with alpha-beta algorithms
 			algo = algorithms::alphabeta;
+		} else if (search() == "mc-rave") {
+			// player with MC-rave algorithms
+			algo = algorithms::rave;
+			cerr << "player " << role() << " : use " << search() << endl;
+
+			// parameter setting
+			if (meta.find("seed") != meta.end())
+				MCravetree.setseed(int(meta["seed"]));
 		} else {
 			// TODO
 		}
@@ -124,11 +129,11 @@ public:
 	virtual action take_action(const board& state) {
 		switch (algo) {
 			case (mcts):
-				thetree.deleteNodes();
+				MCtree.deleteNodes();
 				// cerr << "delete" << endl;
-				thetree.setroot(state);
+				MCtree.setroot(state);
 				// cerr << "set" << endl;
-				return thetree.uctsearch();
+				return MCtree.uctsearch(std::stoi(property("timeout")));
 			case (random):
 				std::shuffle(space.begin(), space.end(), engine);
 				for (const action::place& move : space) {
@@ -137,6 +142,12 @@ public:
 						return move;
 				}
 				return action();
+			case (rave):
+				MCravetree.deleteNodes();
+				// cerr << "delete" << endl;
+				MCravetree.setroot(state);
+				// cerr << "set" << endl;
+				return MCravetree.mcravesearch(std::stoi(property("timeout")));
 			default:
 				return action();
 		}
@@ -146,7 +157,8 @@ private:
 	std::vector<action::place> space;
 	board::piece_type who;
 	algorithms algo;
-	MctsTree thetree;
+	MctsTree MCtree;
+	McraveTree MCravetree;
 
 protected:
 	std::default_random_engine engine;

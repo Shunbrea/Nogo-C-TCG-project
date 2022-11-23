@@ -1,97 +1,122 @@
 #include "action.h"
 #include "board.h"
-#include "tree.h"
+#include "mctstree.h"
+#include <ctime>
 #include <algorithm>
+#include <limits>
 
 class McraveTree : public Tree {
 
 public:    
     // constructor
-    McraveTree(int n = 100): Tree(n) {}
-    McraveTree(const McraveTree& t): Tree(t.nodes_limit) {}
+    McraveTree(): Tree() {}
+    McraveTree(const McraveTree& t): Tree() {
+        setroot(t.root->state);
+    }
 
     void setseed(int seed) {
         engine.seed(seed);
     }
 
-    // procedure UctSearch(s0)
-    action::place mcravesearch() {
+    // procedure Mc–Rave(s0)
+    action::place mcravesearch(int time_limit) {
+        clock_t timer1, timer2;
+        timer1 = clock();
         if (root->Numpossiblemoves() == 0) return action();
-        for (size_t i = 0; i < nodes_limit; i++){
+        timer2 = clock();
+        // cout << (timer2 - timer1) << endl;
+        while ((timer2 - timer1) < time_limit){
             simulate();
-        }        
+            timer2 = clock();
+            // cout << (timer2 - timer1) << endl;
+        }
         double c=0;
-        action::place move = slection_one(root, c)->takemove;
+        action::place move = selectmove(root, c);
         // cerr << "Simulate " << i << " times, Move = " << move << endl;
         return move;
     }
 
     // procedure Simulate(board, s0)
     void simulate() {
-        Node* select_node = slection();
-        // cout << "The select node depth = " << select_node->depth << endl;
+        Node* expan_node = slection();
+        // cout << "The select move = " << expan_node->takemove << endl;
 
-        Node* expan_node = expansion(select_node);
-        // cout << "The expansion node depth = " << expan_node->depth << endl;
+        vector<action::place> rollout_play = rollout(expan_node);
 
-        bool win = rollout(expan_node);
+        board::piece_type winer;
+        if (rollout_play.size() > 0){
+            winer = rollout_play.back().color();
+        } else {
+            winer = expan_node->takemove.color();
+        }
+        bool win = (who == winer);
+        // cout << endl;
+        // cout << "The rollout_play last = " << winer << endl;
         // cout << "The rollout result = " << win << endl;
 
         // cout << "before backpropagation, root= " << root->wins << "/" << root->visits << endl;
-        backpropagation(expan_node, win);
+        backpropagation(expan_node, rollout_play, win);
         // cout << "after backpropagation, root= " << root->wins << "/" << root->visits << endl;
     }
 
     // procedure SimTree(board)
     Node* slection() {
         // cerr << "here is slection" << endl;
-        int level;
+        // int level;
+        // level = root->depth;
+        Node* select_node = root;
         double c=sqrt(2);
-        Node* select_node;
-
-        level = root->depth;
-        select_node = slection_one(root, c);
-        // cerr << level << "|" << select_node->depth << endl;
-        while (select_node->depth != level){
-            level = select_node->depth;
-            select_node = slection_one(select_node, c);
-            
-            // cerr << level << "|" << select_node->depth << endl;
+        while (select_node->legal_count > 0){
+            action::place selected_move = selectmove(select_node, c);
+            // cerr << select_node->legal_count << endl;
+            bool node_exist = false;
+            for (Node* cn_ptr : select_node->child_nodes){
+                if (cn_ptr->takemove == selected_move){
+                    node_exist = true;
+                    select_node = cn_ptr;
+                    break;
+                }
+            }
+            if (node_exist == false){
+                // cerr << select_node->state << endl;
+                // cerr << selected_move << endl;
+                return expansion(select_node, selected_move);
+            }
         }
-        // cerr << "here is slection end" << endl;
         return select_node;
     }
 
     // procedure SelectMove(board, s, c)
-    Node* slection_one(Node* here_node, double c){
-        // cout << "here is slection_one" << endl;
+    action::place selectmove(Node* here_node, double c){
+        // cout << "here is slection_one | c = " << c << endl;
         int max_idx;
-        if (here_node->Numpossiblemoves() > 0) {
-            return here_node;
-        } else {
-            if (here_node->child_nodes.size() == 0) {
-                return here_node;
-            } else {
-                std::vector<double> vec;
-                double v;
-                for (const Node* n : here_node->child_nodes) {
-                    double q = double(n->wins) / double(n->visits);
-                    double p = sqrt(log10(here_node->visits) / double(n->visits));
-                    if (who == here_node->state.info().who_take_turns){
-                        v = q + c * p;
-                    } else {
-                        v = q - c * p;
-                    }
-                    vec.push_back(v);
-                }
+
+        std::vector<double> vec;
+        double v;
+        // int n = std::accumulate(here_node->visits.begin(), here_node->visits.end(), 0);
+        for (size_t i = 0; i < here_node->legal_count; i++) {
+            // cerr << here_node->legalmoves[i] << here_node->wins[i] << "|";
+            // cerr << here_node->visits[i] << "\t";
+            if (here_node->amaf_visits[i] == 0){
                 if (who == here_node->state.info().who_take_turns){
-                    max_idx = arg_max(vec);
+                    v = std::numeric_limits<double>::infinity();
                 } else {
-                    max_idx = arg_min(vec);
+                    v = -1 * std::numeric_limits<double>::infinity();
                 }
-                return here_node->child_nodes[max_idx];
+                // cerr << v << "|*|*\t";
+                vec.emplace_back(v);
+            } else {
+                v = expval(here_node, i);
+                // cerr << v << "|" << q << "|" << p << "\t";
             }
+            vec.emplace_back(v);
         }
+        if (who == here_node->state.info().who_take_turns){
+            max_idx = arg_max(vec);
+        } else {
+            max_idx = arg_min(vec);
+        }
+        return here_node->legalmoves[max_idx];
         // cout << "here is slection end" << endl;
     }
 
@@ -105,32 +130,36 @@ public:
     }
     
     // procedure NewNode(s)
-    Node* expansion(Node* select_node) {
-        if (select_node->Numpossiblemoves() == 0) return select_node;
-        action::place move = getRandomMove(select_node);
+    Node* expansion(Node* select_node, action::place move) {
+        // cerr << "here is expansion" << endl;
         Node* child = select_node->addChild(move);
         addNode(child);
         return child;
     }
     
-    action::place getRandomMove(Node* select_node) {       
-        std::shuffle(std::begin(select_node->possiblemoves),
-                     std::end(select_node->possiblemoves),
-                     engine); 
-        action::place mv = select_node->possiblemoves.back();
-        select_node->possiblemoves.pop_back();
-        return mv;
-    }
+    // action::place getRandomMove(Node* select_node) {       
+    //     std::shuffle(std::begin(select_node->possiblemoves),
+    //                  std::end(select_node->possiblemoves),
+    //                  engine); 
+    //     action::place mv = select_node->possiblemoves.back();
+    //     select_node->possiblemoves.pop_back();
+    //     return mv;
+    // }
 
     // procedure SimDefault(board)
-    bool rollout(Node* expan_node) {
+    vector<action::place> rollout(Node* expan_node) {
+        // cerr << "here is rollout" << endl;
         // cout << nodes[amount_nodes-1]->state << endl;
-        board::piece_type losser = random_rollout(expan_node);
-        bool win = (losser != who);
-        return win;
+        if (expan_node->legal_count > 0){
+            vector<action::place> rollout_play = random_rollout(expan_node);
+            return rollout_play;
+        } else {
+            vector<action::place> rollout_play(0);
+            return rollout_play;
+        }
     }
 
-    board::piece_type random_rollout(Node* expan_node) {
+    vector<action::place> random_rollout(Node* expan_node) {
         size_t i;
         board temp;
         board after;
@@ -138,14 +167,15 @@ public:
         std::array<int, board::size_x * board::size_y> pos;
         std::iota(pos.begin(), pos.end(), 1);
         std::shuffle(pos.begin(), pos.end(), engine);
-        std::vector<action::place> move_vec;
+        vector<action::place> rollout_play;
         while (true){
             for (i = 0; i < board::size_x * board::size_y; i++){
                 temp = after;
                 action::place move(pos[i], after.info().who_take_turns);
                 if (move.apply(temp) == board::legal){
                     after = temp;
-                    move_vec.push_back(move);
+                    // cerr << "get move" << endl;
+                    rollout_play.push_back(move);
                     break;
                 }
             }
@@ -154,23 +184,52 @@ public:
             }
         }
         // cout << after << endl;
-        return after.info().who_take_turns;
+        return rollout_play;
     }
     
-    // procedure Backup([s0,..., sT ], z)
-    void backpropagation(Node* expan_node, bool win) {
-        nodepropagation(expan_node, win);
-    }
+    // procedure Backup([s0,..., sT ],[a0,...,aD], z)
+    void backpropagation(Node* expan_node, vector<action::place> rollout_play, bool win) {
+        Node* node = expan_node;
+        action::place move;
+        std::reverse(rollout_play.begin(), rollout_play.end());
+        while (node->depth > 0){
+            move = node->takemove;
+            rollout_play.push_back(move);
+            node = node->parent_node;
+        }
+        std::reverse(rollout_play.begin(), rollout_play.end());
 
-    void nodepropagation(Node* node, bool win){
-        node->visits++;
-        if (win) {
-            node->wins++;
-        };
-        if (node->depth > 0) {
-            backpropagation(node->parent_node, win);
+        node = expan_node;
+        while (node->depth > 0){
+            move = node->takemove;
+            node = node->parent_node;
+            for (size_t i = 0; i < node->legal_count; i++){
+                if (node->legalmoves[i] == move){
+                    node->visits[i]++;
+                    if (win) node->wins[i]++;
+                }
+                for (action::place amaf_move : rollout_play){
+                    if (node->legalmoves[i] == amaf_move){
+                        node->amaf_visits[i]++;
+                        if (win) node->amaf_wins[i]++;
+                    }
+                }
+            }
+
         }
     }
+
+    // procedure Eval(s,a)
+    double b = 0.025;
+    double expval(Node* node, size_t i){
+        double ne = double(node->amaf_visits[i]);
+        double n = double(node->visits[i]);
+        double beta = ne/(n + ne + 4*n*ne*b*b);
+        double qe = double(node->amaf_wins[i])/double(node->amaf_visits[i]);
+        double q = double(node->wins[i])/double(node->visits[i]);
+        return (1-beta)*q+beta*qe;
+    }
+
 
 protected:
     std::default_random_engine engine;

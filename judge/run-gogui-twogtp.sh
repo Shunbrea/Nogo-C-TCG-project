@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "GoGui-TwoGTP Launcher V20221101"
 # commands for player 1
-P1B='../nogo --shell --name="MyNoGo-black" --black="search=MCTS timeout=1000"'
-P1W='../nogo --shell --name="MyNoGo-white" --white="search=MCTS timeout=1000"'
+P1B='../nogo --shell --name="MyNoGo-black" --black="search=mc-rave timeout=1000000"'
+P1W='../nogo --shell --name="MyNoGo-white" --white="search=mc-rave timeout=1000000"'
 # commands for local player 2
 P2B='./nogo-judge --shell --name="Judge-Weak-Black" --black="weak"'
 P2W='./nogo-judge --shell --name="Judge-Weak-White" --white="weak"'
