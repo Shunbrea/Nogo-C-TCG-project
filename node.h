@@ -14,7 +14,11 @@ public:
     //     board& state = state;
     // }
     Node(board state) : state(state) {
-        setPossibleMoves();
+        setlegalMoves();
+        visits.resize(legal_count);
+        amaf_visits.resize(legal_count);
+        wins.resize(legal_count);
+        amaf_wins.resize(legal_count);
     };
 
     // parent node of the node
@@ -24,10 +28,12 @@ public:
     vector<Node*> child_nodes;
 
     // amount of times that this node has been used for simulations either as leaf node or as node in the branch of the leaf node
-    int visits = 0;
+    vector<int> visits;
+    vector<int> amaf_visits;
 
     // amount of wins that occurred by simulations having this node in its branch
-    int wins = 0;
+    vector<int> wins;
+    vector<int> amaf_wins;
 
     // the tree depth of this node
     int depth = 0;
@@ -36,15 +42,19 @@ public:
     const board state;
     
     // set the array with possible moves
+    vector<action::place> legalmoves;
     vector<action::place> possiblemoves;
-    void setPossibleMoves() {
+    size_t legal_count;
+    void setlegalMoves() {
         for (size_t i = 0; i < board::size_x * board::size_y; i++){
             board after = state;
             action::place move(i, state.info().who_take_turns);
             if (move.apply(after) == board::legal){
-                possiblemoves.push_back(action::place(i, state.info().who_take_turns));
+                legalmoves.emplace_back(action::place(i, state.info().who_take_turns));
             }
         }
+        legal_count = legalmoves.size();
+        possiblemoves = legalmoves;
     }
 
     int Numpossiblemoves() {
@@ -63,11 +73,10 @@ public:
         
         child = new Node(after);
 
-        // child->setPossibleMoves();
         child->depth++;
 
         // assign the new child node as a child node of the actual node
-        child_nodes.push_back(child);
+        child_nodes.emplace_back(child);
 
         // assign actual node as parent node
         child->parent_node = this;
