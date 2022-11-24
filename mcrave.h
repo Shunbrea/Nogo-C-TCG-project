@@ -191,6 +191,12 @@ public:
     void backpropagation(Node* expan_node, vector<action::place> rollout_play, bool win) {
         Node* node = expan_node;
         action::place move;
+
+        // for (action::place amaf_move : rollout_play){
+        //     cout << amaf_move << "=>";
+        // }
+        // cout << endl;
+
         std::reverse(rollout_play.begin(), rollout_play.end());
         while (node->depth > 0){
             move = node->takemove;
@@ -199,10 +205,26 @@ public:
         }
         std::reverse(rollout_play.begin(), rollout_play.end());
 
+        // for (action::place amaf_move : rollout_play){
+        //     cout << amaf_move << "=>";
+        // }
+        // cout << endl;
+
         node = expan_node;
         while (node->depth > 0){
             move = node->takemove;
             node = node->parent_node;
+
+            // cerr << "b4" << endl;
+            // for (size_t i = 0; i < node->legal_count; i++){
+            //     cerr << node->legalmoves[i] << ":";
+            //     cerr << node->visits[i] << "|";
+            //     cerr << node->wins[i] << "|";
+            //     cerr << node->amaf_visits[i] << "|";
+            //     cerr << node->amaf_wins[i] << " = ";
+            //     cerr << expval(node,i) << endl;
+            // }
+
             for (size_t i = 0; i < node->legal_count; i++){
                 if (node->legalmoves[i] == move){
                     node->visits[i]++;
@@ -215,6 +237,16 @@ public:
                     }
                 }
             }
+            
+            // cerr << "aft" << endl;
+            // for (size_t i = 0; i < node->legal_count; i++){
+            //     cerr << node->legalmoves[i] << ":";
+            //     cerr << node->visits[i] << "|";
+            //     cerr << node->wins[i] << "|";
+            //     cerr << node->amaf_visits[i] << "|";
+            //     cerr << node->amaf_wins[i] << " = ";
+            //     cerr << expval(node,i) << endl;
+            // }
 
         }
     }
@@ -227,7 +259,12 @@ public:
         double beta = ne/(n + ne + 4*n*ne*b*b);
         double qe = double(node->amaf_wins[i])/double(node->amaf_visits[i]);
         double q = double(node->wins[i])/double(node->visits[i]);
-        return (1-beta)*q+beta*qe;
+        if (beta == 1.0) {
+            return qe;
+        } else {
+            return (1-beta)*q+beta*qe;
+        }
+        
     }
 
 
