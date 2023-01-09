@@ -2,12 +2,16 @@
 #include <iostream>
 #include "board.h"
 #include "episode.h"
+#include "pynet.h"
+#include <tuple>
 // #include "mcrave.h"
+
 
 using namespace std;
 
 int main()
 {
+
     episode ep;
     cout << ep.state() << endl;
     
@@ -15,11 +19,14 @@ int main()
 
     McraveTree thetree;
     action::place move;
+    thetree.set_nodeinit(true);
 
     thetree.deleteNodes();
     thetree.setroot(ep.state());
-    cout << thetree.who << endl;
-    cout << thetree.root->state << endl;
+    // cout << thetree.who << endl;
+    // cout << thetree.root->state << endl;
+
+    PyNNet pynet;
     
     // for (size_t i=0; i<50; i++){
     //     thetree.deleteNodes();
@@ -38,8 +45,11 @@ int main()
         cout << i << endl;;
 
         Node* expan_node = thetree.slection();
-        // cout << "The select move = " << expan_node->takemove << endl;
-
+        auto [prob, value] = pynet.predict(expan_node->state);
+        
+        cout << "The board : " << endl;
+        cout << expan_node->state << endl;
+        cout << "The value = " << value << endl;
         vector<action::place> rollout_play = thetree.rollout(expan_node);
 
         board::piece_type winer;

@@ -34,7 +34,7 @@ public:
     // amount of wins that occurred by simulations having this node in its branch
     vector<int> wins;
     vector<int> amaf_wins;
-
+    
     // the tree depth of this node
     int depth = 0;
 

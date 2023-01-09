@@ -46,13 +46,19 @@ To specify custom player arguments (need to be implemented by yourself):
 ```bash
 ./nogo --total=1000 --black="search=MCTS timeout=1000" --white="search=alpha-beta depth=3"
 
-./nogo --total=10 --black="search=mc-rave timeout=100000" --white="search=MCTS timeout=100000"
+./nogo --total=10 --black="search=mc-rave timeout=1000000" --white=""
+
+./nogo --total=10 --black="search=mc-rave timeout=1000000 nodeinit=true" --white=""
+
+./nogo --total=10 --black="search=mc-rave timeout=1000000 nodeinit=true" --white="search=mc-rave timeout=1000000"
+
+./nogo --total=10 --black="search=mc-rave timeout=1000000" --white="search=mc-rave timeout=1000000 nodeinit=true"
 ```
 
 To launch the GTP shell and specify program name for the GTP server:
 ```bash
-P1B='../nogo --shell --name="MyNoGo-black" --black="search=MCTS timeout=1000"'
-P1W='../nogo --shell --name="MyNoGo-white" --white="search=MCTS timeout=1000"'
+P1B='../nogo --shell --name="MyNoGo-black" --black="search=MCTS timeout=1000 nodeinit=true"'
+P1W='../nogo --shell --name="MyNoGo-white" --white="search=MCTS timeout=1000 nodeinit=true"'
 ```
 
 To launch the GTP shell with custom player arguments:

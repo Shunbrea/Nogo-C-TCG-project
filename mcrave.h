@@ -1,6 +1,7 @@
 #include "action.h"
 #include "board.h"
 #include "mctstree.h"
+#include "nodeinit.h"
 #include <ctime>
 #include <algorithm>
 #include <limits>
@@ -129,10 +130,51 @@ public:
         return static_cast<int>(std::distance(vec.begin(), min_element(vec.begin(), vec.end())));
     }
     
+    bool nodeinit = false;
+    nodeinits nodeinit_value;
+    void set_nodeinit(bool a){
+        nodeinit = a;
+    }
+
+    virtual void setroot(const board& root_board){
+        root = new Node(root_board);
+        who = root_board.info().who_take_turns;
+        if (nodeinit){
+            for (size_t i = 0; i < root->legal_count; i++) {
+                int pos = root->legalmoves[i].position().i;
+                
+                // cerr << root->legalmoves[i] << endl;
+                // cerr << pos << "=" << root->legalmoves[i].position().x << root->legalmoves[i].position().y << endl;
+                // cerr << "v=" << nodeinit_value.visits[pos] << endl;
+                // cerr << "w=" << nodeinit_value.wins[pos] << endl;
+                
+                root->amaf_visits[i] = nodeinit_value.visits[pos];
+                root->amaf_wins[i] = nodeinit_value.wins[pos];
+                root->visits[i] = nodeinit_value.visits[pos];
+                root->wins[i] = nodeinit_value.wins[pos];
+            }
+        }
+    }
+    
     // procedure NewNode(s)
     Node* expansion(Node* select_node, action::place move) {
         // cerr << "here is expansion" << endl;
         Node* child = select_node->addChild(move);
+        if (nodeinit){
+            for (size_t i = 0; i < child->legal_count; i++) {
+                int pos = child->legalmoves[i].position().i;
+
+                // cerr << root->legalmoves[i] << endl;
+                // cerr << pos << "=" << root->legalmoves[i].position().x << root->legalmoves[i].position().y << endl;
+                // cerr << "v=" << nodeinit_value.visits[pos] << endl;
+                // cerr << "w=" << nodeinit_value.wins[pos] << endl;
+
+                child->amaf_visits[i] = nodeinit_value.visits[pos];
+                child->amaf_wins[i] = nodeinit_value.wins[pos];
+                child->visits[i] = nodeinit_value.visits[pos];
+                child->wins[i] = nodeinit_value.wins[pos];
+            }
+        }
         addNode(child);
         return child;
     }

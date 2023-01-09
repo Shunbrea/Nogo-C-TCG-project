@@ -121,6 +121,8 @@ public:
 			// parameter setting
 			if (meta.find("seed") != meta.end())
 				MCravetree.setseed(int(meta["seed"]));
+			if (meta.find("nodeinit") != meta.end())
+			    MCravetree.set_nodeinit(true);
 		} else {
 			// TODO
 		}

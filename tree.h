@@ -19,10 +19,12 @@ public:
 
     Node* root = 0;
     board::piece_type who = board::unknown;
-    void setroot(const board& root_board){
+    virtual void setroot(const board& root_board){
         root = new Node(root_board);
         who = root_board.info().who_take_turns;
     }
+
+    
 
     // add a pointer to the tree of nodes
     void addNode(Node *node) {

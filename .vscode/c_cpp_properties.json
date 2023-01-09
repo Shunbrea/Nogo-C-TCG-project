@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/local/include/**"
+                "/usr/local/include/**",
+                // "/home/ericlin/anaconda3/include/**"
             ],
             "defines": [],
             "compilerPath": "/bin/cpp",
