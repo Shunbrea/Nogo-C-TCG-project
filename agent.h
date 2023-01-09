@@ -20,6 +20,7 @@
 #include "action.h"
 // #include "mctstree.h"
 #include "mcrave.h"
+#include "pynet.h"
 
 class agent {
 public:
@@ -75,7 +76,7 @@ protected:
  */
 class player : public agent {
 public:
-	enum algorithms { random = 0u, mcts = 1u, alphabeta = 2u, rave = 3u };
+	enum algorithms { random = 0u, mcts = 1u, alphabeta = 2u, rave = 3u, zero = 4u};
 	virtual std::string search() const { return property("search"); }
 
 	player(const std::string& args = "") : agent("role=unknown " + args),
@@ -123,6 +124,13 @@ public:
 				MCravetree.setseed(int(meta["seed"]));
 			if (meta.find("nodeinit") != meta.end())
 			    MCravetree.set_nodeinit(true);
+		} else if (search() == "zero") {
+			// player with alphazero algorithms
+			algo = algorithms::zero;
+			cerr << "player " << role() << " : use " << search() << endl;
+
+			// parameter setting
+			
 		} else {
 			// TODO
 		}
@@ -150,6 +158,14 @@ public:
 				MCravetree.setroot(state);
 				// cerr << "set" << endl;
 				return MCravetree.mcravesearch(std::stoi(property("timeout")));
+			case (zero):
+			{
+				size_t act_ind = pynet.GetAction(state, who);
+				action::place pymove(act_ind, who);
+				return pymove;
+			}
+			case (alphabeta):
+				return action();
 			default:
 				return action();
 		}
@@ -161,6 +177,7 @@ private:
 	algorithms algo;
 	MctsTree MCtree;
 	McraveTree MCravetree;
+	PyNNet pynet;
 
 protected:
 	std::default_random_engine engine;

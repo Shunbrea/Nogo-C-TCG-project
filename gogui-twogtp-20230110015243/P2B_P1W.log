@@ -1,0 +1,5276 @@
+B>> protocol_version
+B<< HollowNoGo-Judge: /mnt/e/PHD work/tcg2022/Nogo-C-TCG-project/./nogo-judge --shell --name=Judge-Weak-Black --black=strong 
+B<< 
+B<< = 2
+B<< 
+B>> name
+B<< = TCG-Judge
+B<< 
+B>> version
+B<< = 2022
+B<< 
+B>> list_commands
+B<< = play
+B<< genmove
+B<< clear_board
+B<< showboard
+B<< boardsize
+B<< name
+B<< version
+B<< protocol_version
+B<< list_commands
+B<< quit
+B<< 
+B<< 
+W>> protocol_version
+W<< HollowNoGo-Demo: /mnt/e/PHD work/tcg2022/Nogo-C-TCG-project/./nogo --shell --name=MyNoGo-white --white=search=zero timeout=1000000 
+W<< 
+PyNNet is init
+player black : use random
+PyNNet is init
+player white : use zero
+W<< = 2
+W<< 
+W>> name
+W<< = MyNoGo-white
+W<< 
+W>> version
+W<< = 2022
+W<< 
+W>> list_commands
+W<< = play
+W<< genmove
+W<< clear_board
+W<< showboard
+W<< boardsize
+W<< name
+W<< version
+W<< protocol_version
+W<< list_commands
+W<< quit
+W<< 
+W<< 
+B>> boardsize 9
+B<< = 
+B<< 
+B>> clear_board
+B<< = 
+B<< 
+W>> boardsize 9
+W<< = 
+W<< 
+W>> clear_board
+W<< = 
+W<< 
+============================================
+Game 0
+============================================
+B>> boardsize 9
+B<< = 
+B<< 
+B>> clear_board
+B<< = 
+B<< 
+W>> boardsize 9
+W<< = 
+W<< 
+W>> clear_board
+W<< = 
+W<< 
+B>> genmove b
+B<< = E1
+B<< 
+W>> play B E1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 40
+W<< y = 4
+W<< x = 4
+W<< new value = 40
+W<< = E5
+W<< 
+B>> play W E5
+B<< = 
+B<< 
+B>> genmove b
+B<< = B4
+B<< 
+W>> play B B4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 30
+W<< y = 3
+W<< x = 3
+W<< new value = 30
+W<< = D4
+W<< 
+B>> play W D4
+B<< = 
+B<< 
+B>> genmove b
+B<< = J4
+B<< 
+W>> play B J4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 50
+W<< y = 5
+W<< x = 5
+W<< new value = 50
+W<< = F6
+W<< 
+B>> play W F6
+B<< = 
+B<< 
+B>> genmove b
+B<< = A1
+B<< 
+W>> play B A1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 7
+W<< y = 0
+W<< x = 7
+W<< new value = 63
+W<< = H1
+W<< 
+B>> play W H1
+B<< = 
+B<< 
+B>> genmove b
+B<< = D9
+B<< 
+W>> play B D9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 17
+W<< y = 1
+W<< x = 8
+W<< new value = 73
+W<< = J2
+W<< 
+B>> play W J2
+B<< = 
+B<< 
+B>> genmove b
+B<< = J9
+B<< 
+W>> play B J9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 73
+W<< y = 8
+W<< x = 1
+W<< new value = 17
+W<< = B9
+W<< 
+B>> play W B9
+B<< = 
+B<< 
+B>> genmove b
+B<< = J6
+B<< 
+W>> play B J6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 63
+W<< y = 7
+W<< x = 0
+W<< new value = 7
+W<< = A8
+W<< 
+B>> play W A8
+B<< = 
+B<< 
+B>> genmove b
+B<< = D5
+B<< 
+W>> play B D5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 32
+W<< y = 3
+W<< x = 5
+W<< new value = 48
+W<< = F4
+W<< 
+B>> play W F4
+B<< = 
+B<< 
+B>> genmove b
+B<< = F7
+B<< 
+W>> play B F7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 55
+W<< y = 6
+W<< x = 1
+W<< new value = 15
+W<< = B7
+W<< 
+B>> play W B7
+B<< = 
+B<< 
+B>> genmove b
+B<< = B8
+B<< 
+W>> play B B8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 45
+W<< y = 5
+W<< x = 0
+W<< new value = 5
+W<< = A6
+W<< 
+B>> play W A6
+B<< = 
+B<< 
+B>> genmove b
+B<< = D7
+B<< 
+W>> play B D7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 47
+W<< y = 5
+W<< x = 2
+W<< new value = 23
+W<< = C6
+W<< 
+B>> play W C6
+B<< = 
+B<< 
+B>> genmove b
+B<< = F9
+B<< 
+W>> play B F9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 27
+W<< y = 3
+W<< x = 0
+W<< new value = 3
+W<< = A4
+W<< 
+B>> play W A4
+B<< = 
+B<< 
+B>> genmove b
+B<< = A3
+B<< 
+W>> play B A3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 66
+W<< y = 7
+W<< x = 3
+W<< new value = 34
+W<< = D8
+W<< 
+B>> play W D8
+B<< = 
+B<< 
+B>> genmove b
+B<< = F2
+B<< 
+W>> play B F2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 20
+W<< y = 2
+W<< x = 2
+W<< new value = 20
+W<< = C3
+W<< 
+B>> play W C3
+B<< = 
+B<< 
+B>> genmove b
+B<< = D3
+B<< 
+W>> play B D3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 1
+W<< y = 0
+W<< x = 1
+W<< new value = 9
+W<< = B1
+W<< 
+B>> play W B1
+B<< = 
+B<< 
+B>> genmove b
+B<< = G6
+B<< 
+W>> play B G6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 11
+W<< y = 1
+W<< x = 2
+W<< new value = 19
+W<< = C2
+W<< 
+B>> play W C2
+B<< = 
+B<< 
+B>> genmove b
+B<< = G8
+B<< 
+W>> play B G8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 3
+W<< y = 0
+W<< x = 3
+W<< new value = 27
+W<< = D1
+W<< 
+B>> play W D1
+B<< = 
+B<< 
+B>> genmove b
+B<< = H7
+B<< 
+W>> play B H7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 34
+W<< y = 3
+W<< x = 7
+W<< new value = 66
+W<< = H4
+W<< 
+B>> play W H4
+B<< = 
+B<< 
+B>> genmove b
+B<< = H9
+B<< 
+W>> play B H9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 24
+W<< y = 2
+W<< x = 6
+W<< new value = 56
+W<< = G3
+W<< 
+B>> play W G3
+B<< = 
+B<< 
+B>> genmove b
+B<< = J8
+B<< 
+W>> play B J8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 74
+W<< y = 8
+W<< x = 2
+W<< new value = 26
+W<< = C9
+W<< 
+B>> play W C9
+B<< = 
+B<< 
+B>> genmove b
+B<< = H3
+B<< 
+W>> play B H3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 10
+W<< y = 1
+W<< x = 1
+W<< new value = 10
+W<< = B2
+W<< 
+B>> play W B2
+B<< = 
+B<< 
+B>> genmove b
+B<< = G1
+B<< 
+W>> play B G1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 16
+W<< y = 1
+W<< x = 7
+W<< new value = 64
+W<< = H2
+W<< 
+B>> play W H2
+B<< = 
+B<< 
+B>> genmove b
+B<< = C7
+B<< 
+W>> play B C7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 15
+W<< y = 1
+W<< x = 6
+W<< new value = 55
+W<< = G2
+W<< 
+B>> play W G2
+B<< = 
+B<< 
+B>> genmove b
+B<< = C4
+B<< 
+W>> play B C4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 23
+W<< y = 2
+W<< x = 5
+W<< new value = 47
+W<< = F3
+W<< 
+B>> play W F3
+B<< = 
+B<< 
+B>> genmove b
+B<< = E6
+B<< 
+W>> play B E6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 8
+W<< y = 0
+W<< x = 8
+W<< new value = 72
+W<< = J1
+W<< 
+B>> play W J1
+B<< = 
+B<< 
+B>> genmove b
+B<< = J5
+B<< 
+W>> play B J5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 2
+W<< y = 0
+W<< x = 2
+W<< new value = 18
+W<< = C1
+W<< 
+B>> play W C1
+B<< = 
+B<< 
+B>> genmove b
+B<< = J3
+B<< 
+W>> play B J3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 46
+W<< y = 5
+W<< x = 1
+W<< new value = 14
+W<< = B6
+W<< 
+B>> play W B6
+B<< = 
+B<< 
+B>> genmove b
+B<< = B3
+B<< 
+W>> play B B3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 72
+W<< y = 8
+W<< x = 0
+W<< new value = 8
+W<< = A9
+W<< 
+B>> play W A9
+B<< = 
+B<< 
+B>> genmove b
+B<< = H6
+B<< 
+W>> play B H6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 54
+W<< y = 6
+W<< x = 0
+W<< new value = 6
+W<< = A7
+W<< 
+B>> play W A7
+B<< = 
+B<< 
+B>> genmove b
+B<< = G7
+B<< 
+W>> play B G7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 36
+W<< y = 4
+W<< x = 0
+W<< new value = 4
+W<< = A5
+W<< 
+B>> play W A5
+B<< = 
+B<< 
+B>> genmove b
+B<< = F8
+B<< 
+W>> play B F8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 31
+W<< y = 3
+W<< x = 4
+W<< new value = 39
+W<< = E4
+W<< 
+B>> play W E4
+B<< = 
+B<< 
+B>> genmove b
+B<< = H8
+B<< 
+W>> play B H8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 33
+W<< y = 3
+W<< x = 6
+W<< new value = 57
+W<< = G4
+W<< 
+B>> play W G4
+B<< = 
+B<< 
+B>> genmove b
+B<< = J7
+B<< 
+W>> play B J7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 43
+W<< y = 4
+W<< x = 7
+W<< new value = 67
+W<< = resign
+W<< 
+============================================
+Game 1
+============================================
+B>> boardsize 9
+B<< = 
+B<< 
+B>> clear_board
+B<< = 
+B<< 
+W>> boardsize 9
+W<< = 
+W<< 
+W>> clear_board
+W<< = 
+W<< 
+B>> genmove b
+B<< = A2
+B<< 
+W>> play B A2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 40
+W<< y = 4
+W<< x = 4
+W<< new value = 40
+W<< = E5
+W<< 
+B>> play W E5
+B<< = 
+B<< 
+B>> genmove b
+B<< = A6
+B<< 
+W>> play B A6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 30
+W<< y = 3
+W<< x = 3
+W<< new value = 30
+W<< = D4
+W<< 
+B>> play W D4
+B<< = 
+B<< 
+B>> genmove b
+B<< = J5
+B<< 
+W>> play B J5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 48
+W<< y = 5
+W<< x = 3
+W<< new value = 32
+W<< = D6
+W<< 
+B>> play W D6
+B<< = 
+B<< 
+B>> genmove b
+B<< = J1
+B<< 
+W>> play B J1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 32
+W<< y = 3
+W<< x = 5
+W<< new value = 48
+W<< = F4
+W<< 
+B>> play W F4
+B<< = 
+B<< 
+B>> genmove b
+B<< = C1
+B<< 
+W>> play B C1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 50
+W<< y = 5
+W<< x = 5
+W<< new value = 50
+W<< = F6
+W<< 
+B>> play W F6
+B<< = 
+B<< 
+B>> genmove b
+B<< = J9
+B<< 
+W>> play B J9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 1
+W<< y = 0
+W<< x = 1
+W<< new value = 9
+W<< = B1
+W<< 
+B>> play W B1
+B<< = 
+B<< 
+B>> genmove b
+B<< = A9
+B<< 
+W>> play B A9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 19
+W<< y = 2
+W<< x = 1
+W<< new value = 11
+W<< = B3
+W<< 
+B>> play W B3
+B<< = 
+B<< 
+B>> genmove b
+B<< = G4
+B<< 
+W>> play B G4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 27
+W<< y = 3
+W<< x = 0
+W<< new value = 3
+W<< = A4
+W<< 
+B>> play W A4
+B<< = 
+B<< 
+B>> genmove b
+B<< = F1
+B<< 
+W>> play B F1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 17
+W<< y = 1
+W<< x = 8
+W<< new value = 73
+W<< = J2
+W<< 
+B>> play W J2
+B<< = 
+B<< 
+B>> genmove b
+B<< = G6
+B<< 
+W>> play B G6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 25
+W<< y = 2
+W<< x = 7
+W<< new value = 65
+W<< = H3
+W<< 
+B>> play W H3
+B<< = 
+B<< 
+B>> genmove b
+B<< = D2
+B<< 
+W>> play B D2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 15
+W<< y = 1
+W<< x = 6
+W<< new value = 55
+W<< = G2
+W<< 
+B>> play W G2
+B<< = 
+B<< 
+B>> genmove b
+B<< = B4
+B<< 
+W>> play B B4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 46
+W<< y = 5
+W<< x = 1
+W<< new value = 14
+W<< = B6
+W<< 
+B>> play W B6
+B<< = 
+B<< 
+B>> genmove b
+B<< = F7
+B<< 
+W>> play B F7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 56
+W<< y = 6
+W<< x = 2
+W<< new value = 24
+W<< = C7
+W<< 
+B>> play W C7
+B<< = 
+B<< 
+B>> genmove b
+B<< = F3
+B<< 
+W>> play B F3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 35
+W<< y = 3
+W<< x = 8
+W<< new value = 75
+W<< = J4
+W<< 
+B>> play W J4
+B<< = 
+B<< 
+B>> genmove b
+B<< = H4
+B<< 
+W>> play B H4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 66
+W<< y = 7
+W<< x = 3
+W<< new value = 34
+W<< = D8
+W<< 
+B>> play W D8
+B<< = 
+B<< 
+B>> genmove b
+B<< = B7
+B<< 
+W>> play B B7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 71
+W<< y = 7
+W<< x = 8
+W<< new value = 79
+W<< = J8
+W<< 
+B>> play W J8
+B<< = 
+B<< 
+B>> genmove b
+B<< = C3
+B<< 
+W>> play B C3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 61
+W<< y = 6
+W<< x = 7
+W<< new value = 69
+W<< = H7
+W<< 
+B>> play W H7
+B<< = 
+B<< 
+B>> genmove b
+B<< = E9
+B<< 
+W>> play B E9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 69
+W<< y = 7
+W<< x = 6
+W<< new value = 61
+W<< = G8
+W<< 
+B>> play W G8
+B<< = 
+B<< 
+B>> genmove b
+B<< = C8
+B<< 
+W>> play B C8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 77
+W<< y = 8
+W<< x = 5
+W<< new value = 53
+W<< = F9
+W<< 
+B>> play W F9
+B<< = 
+B<< 
+B>> genmove b
+B<< = B2
+B<< 
+W>> play B B2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 3
+W<< y = 0
+W<< x = 3
+W<< new value = 27
+W<< = D1
+W<< 
+B>> play W D1
+B<< = 
+B<< 
+B>> genmove b
+B<< = G3
+B<< 
+W>> play B G3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 6
+W<< y = 0
+W<< x = 6
+W<< new value = 54
+W<< = G1
+W<< 
+B>> play W G1
+B<< = 
+B<< 
+B>> genmove b
+B<< = H2
+B<< 
+W>> play B H2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 73
+W<< y = 8
+W<< x = 1
+W<< new value = 17
+W<< = B9
+W<< 
+B>> play W B9
+B<< = 
+B<< 
+B>> genmove b
+B<< = A5
+B<< 
+W>> play B A5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 21
+W<< y = 2
+W<< x = 3
+W<< new value = 29
+W<< = D3
+W<< 
+B>> play W D3
+B<< = 
+B<< 
+B>> genmove b
+B<< = A7
+B<< 
+W>> play B A7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 74
+W<< y = 8
+W<< x = 2
+W<< new value = 26
+W<< = C9
+W<< 
+B>> play W C9
+B<< = 
+B<< 
+B>> genmove b
+B<< = J7
+B<< 
+W>> play B J7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 52
+W<< y = 5
+W<< x = 7
+W<< new value = 68
+W<< = H6
+W<< 
+B>> play W H6
+B<< = 
+B<< 
+B>> genmove b
+B<< = C2
+B<< 
+W>> play B C2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 47
+W<< y = 5
+W<< x = 2
+W<< new value = 23
+W<< = C6
+W<< 
+B>> play W C6
+B<< = 
+B<< 
+B>> genmove b
+B<< = B8
+B<< 
+W>> play B B8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 39
+W<< y = 4
+W<< x = 3
+W<< new value = 31
+W<< = D5
+W<< 
+B>> play W D5
+B<< = 
+B<< 
+B>> genmove b
+B<< = C4
+B<< 
+W>> play B C4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 78
+W<< y = 8
+W<< x = 6
+W<< new value = 62
+W<< = G9
+W<< 
+B>> play W G9
+B<< = 
+B<< 
+B>> genmove b
+B<< = H9
+B<< 
+W>> play B H9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 57
+W<< y = 6
+W<< x = 3
+W<< new value = 33
+W<< = D7
+W<< 
+B>> play W D7
+B<< = 
+B<< 
+B>> genmove b
+B<< = F2
+B<< 
+W>> play B F2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 68
+W<< y = 7
+W<< x = 5
+W<< new value = 52
+W<< = F8
+W<< 
+B>> play W F8
+B<< = 
+B<< 
+B>> genmove b
+B<< = resign
+B<< 
+============================================
+Game 2
+============================================
+B>> boardsize 9
+B<< = 
+B<< 
+B>> clear_board
+B<< = 
+B<< 
+W>> boardsize 9
+W<< = 
+W<< 
+W>> clear_board
+W<< = 
+W<< 
+B>> genmove b
+B<< = J5
+B<< 
+W>> play B J5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 40
+W<< y = 4
+W<< x = 4
+W<< new value = 40
+W<< = E5
+W<< 
+B>> play W E5
+B<< = 
+B<< 
+B>> genmove b
+B<< = C4
+B<< 
+W>> play B C4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 32
+W<< y = 3
+W<< x = 5
+W<< new value = 48
+W<< = F4
+W<< 
+B>> play W F4
+B<< = 
+B<< 
+B>> genmove b
+B<< = E4
+B<< 
+W>> play B E4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 50
+W<< y = 5
+W<< x = 5
+W<< new value = 50
+W<< = F6
+W<< 
+B>> play W F6
+B<< = 
+B<< 
+B>> genmove b
+B<< = E6
+B<< 
+W>> play B E6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 52
+W<< y = 5
+W<< x = 7
+W<< new value = 68
+W<< = H6
+W<< 
+B>> play W H6
+B<< = 
+B<< 
+B>> genmove b
+B<< = A5
+B<< 
+W>> play B A5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 17
+W<< y = 1
+W<< x = 8
+W<< new value = 73
+W<< = J2
+W<< 
+B>> play W J2
+B<< = 
+B<< 
+B>> genmove b
+B<< = E1
+B<< 
+W>> play B E1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 7
+W<< y = 0
+W<< x = 7
+W<< new value = 63
+W<< = H1
+W<< 
+B>> play W H1
+B<< = 
+B<< 
+B>> genmove b
+B<< = G6
+B<< 
+W>> play B G6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 71
+W<< y = 7
+W<< x = 8
+W<< new value = 79
+W<< = J8
+W<< 
+B>> play W J8
+B<< = 
+B<< 
+B>> genmove b
+B<< = A9
+B<< 
+W>> play B A9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 79
+W<< y = 8
+W<< x = 7
+W<< new value = 71
+W<< = H9
+W<< 
+B>> play W H9
+B<< = 
+B<< 
+B>> genmove b
+B<< = E9
+B<< 
+W>> play B E9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 1
+W<< y = 0
+W<< x = 1
+W<< new value = 9
+W<< = B1
+W<< 
+B>> play W B1
+B<< = 
+B<< 
+B>> genmove b
+B<< = H4
+B<< 
+W>> play B H4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 69
+W<< y = 7
+W<< x = 6
+W<< new value = 61
+W<< = G8
+W<< 
+B>> play W G8
+B<< = 
+B<< 
+B>> genmove b
+B<< = F8
+B<< 
+W>> play B F8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 61
+W<< y = 6
+W<< x = 7
+W<< new value = 69
+W<< = H7
+W<< 
+B>> play W H7
+B<< = 
+B<< 
+B>> genmove b
+B<< = D3
+B<< 
+W>> play B D3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 9
+W<< y = 1
+W<< x = 0
+W<< new value = 1
+W<< = A2
+W<< 
+B>> play W A2
+B<< = 
+B<< 
+B>> genmove b
+B<< = G1
+B<< 
+W>> play B G1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 25
+W<< y = 2
+W<< x = 7
+W<< new value = 65
+W<< = H3
+W<< 
+B>> play W H3
+B<< = 
+B<< 
+B>> genmove b
+B<< = B8
+B<< 
+W>> play B B8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 11
+W<< y = 1
+W<< x = 2
+W<< new value = 19
+W<< = C2
+W<< 
+B>> play W C2
+B<< = 
+B<< 
+B>> genmove b
+B<< = A7
+B<< 
+W>> play B A7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 19
+W<< y = 2
+W<< x = 1
+W<< new value = 11
+W<< = B3
+W<< 
+B>> play W B3
+B<< = 
+B<< 
+B>> genmove b
+B<< = C9
+B<< 
+W>> play B C9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 3
+W<< y = 0
+W<< x = 3
+W<< new value = 27
+W<< = D1
+W<< 
+B>> play W D1
+B<< = 
+B<< 
+B>> genmove b
+B<< = D8
+B<< 
+W>> play B D8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 77
+W<< y = 8
+W<< x = 5
+W<< new value = 53
+W<< = F9
+W<< 
+B>> play W F9
+B<< = 
+B<< 
+B>> genmove b
+B<< = C7
+B<< 
+W>> play B C7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 27
+W<< y = 3
+W<< x = 0
+W<< new value = 3
+W<< = A4
+W<< 
+B>> play W A4
+B<< = 
+B<< 
+B>> genmove b
+B<< = B6
+B<< 
+W>> play B B6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 57
+W<< y = 6
+W<< x = 3
+W<< new value = 33
+W<< = D7
+W<< 
+B>> play W D7
+B<< = 
+B<< 
+B>> genmove b
+B<< = C6
+B<< 
+W>> play B C6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 53
+W<< y = 5
+W<< x = 8
+W<< new value = 77
+W<< = J6
+W<< 
+B>> play W J6
+B<< = 
+B<< 
+B>> genmove b
+B<< = H2
+B<< 
+W>> play B H2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 14
+W<< y = 1
+W<< x = 5
+W<< new value = 46
+W<< = F2
+W<< 
+B>> play W F2
+B<< = 
+B<< 
+B>> genmove b
+B<< = J3
+B<< 
+W>> play B J3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 20
+W<< y = 2
+W<< x = 2
+W<< new value = 20
+W<< = C3
+W<< 
+B>> play W C3
+B<< = 
+B<< 
+B>> genmove b
+B<< = F3
+B<< 
+W>> play B F3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 39
+W<< y = 4
+W<< x = 3
+W<< new value = 31
+W<< = D5
+W<< 
+B>> play W D5
+B<< = 
+B<< 
+B>> genmove b
+B<< = G4
+B<< 
+W>> play B G4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 70
+W<< y = 7
+W<< x = 7
+W<< new value = 70
+W<< = H8
+W<< 
+B>> play W H8
+B<< = 
+B<< 
+B>> genmove b
+B<< = D4
+B<< 
+W>> play B D4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 10
+W<< y = 1
+W<< x = 1
+W<< new value = 10
+W<< = B2
+W<< 
+B>> play W B2
+B<< = 
+B<< 
+B>> genmove b
+B<< = A8
+B<< 
+W>> play B A8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 28
+W<< y = 3
+W<< x = 1
+W<< new value = 12
+W<< = B4
+W<< 
+B>> play W B4
+B<< = 
+B<< 
+B>> genmove b
+B<< = J4
+B<< 
+W>> play B J4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 41
+W<< y = 4
+W<< x = 5
+W<< new value = 49
+W<< = F5
+W<< 
+B>> play W F5
+B<< = 
+B<< 
+B>> genmove b
+B<< = C8
+B<< 
+W>> play B C8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 2
+W<< y = 0
+W<< x = 2
+W<< new value = 18
+W<< = C1
+W<< 
+B>> play W C1
+B<< = 
+B<< 
+B>> genmove b
+B<< = F1
+B<< 
+W>> play B F1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 78
+W<< y = 8
+W<< x = 6
+W<< new value = 62
+W<< = G9
+W<< 
+B>> play W G9
+B<< = 
+B<< 
+B>> genmove b
+B<< = B7
+B<< 
+W>> play B B7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 62
+W<< y = 6
+W<< x = 8
+W<< new value = 78
+W<< = J7
+W<< 
+B>> play W J7
+B<< = 
+B<< 
+B>> genmove b
+B<< = F7
+B<< 
+W>> play B F7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 18
+W<< y = 2
+W<< x = 0
+W<< new value = 2
+W<< = A3
+W<< 
+B>> play W A3
+B<< = 
+B<< 
+B>> genmove b
+B<< = D9
+B<< 
+W>> play B D9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 80
+W<< y = 8
+W<< x = 8
+W<< new value = 80
+W<< = J9
+W<< 
+B>> play W J9
+B<< = 
+B<< 
+B>> genmove b
+B<< = B9
+B<< 
+W>> play B B9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 0
+W<< y = 0
+W<< x = 0
+W<< new value = 0
+W<< = A1
+W<< 
+B>> play W A1
+B<< = 
+B<< 
+B>> genmove b
+B<< = A6
+B<< 
+W>> play B A6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 57
+W<< y = 6
+W<< x = 3
+W<< new value = 33
+W<< = resign
+W<< 
+============================================
+Game 3
+============================================
+B>> boardsize 9
+B<< = 
+B<< 
+B>> clear_board
+B<< = 
+B<< 
+W>> boardsize 9
+W<< = 
+W<< 
+W>> clear_board
+W<< = 
+W<< 
+B>> genmove b
+B<< = J6
+B<< 
+W>> play B J6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 40
+W<< y = 4
+W<< x = 4
+W<< new value = 40
+W<< = E5
+W<< 
+B>> play W E5
+B<< = 
+B<< 
+B>> genmove b
+B<< = G6
+B<< 
+W>> play B G6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 48
+W<< y = 5
+W<< x = 3
+W<< new value = 32
+W<< = D6
+W<< 
+B>> play W D6
+B<< = 
+B<< 
+B>> genmove b
+B<< = A5
+B<< 
+W>> play B A5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 32
+W<< y = 3
+W<< x = 5
+W<< new value = 48
+W<< = F4
+W<< 
+B>> play W F4
+B<< = 
+B<< 
+B>> genmove b
+B<< = H7
+B<< 
+W>> play B H7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 30
+W<< y = 3
+W<< x = 3
+W<< new value = 30
+W<< = D4
+W<< 
+B>> play W D4
+B<< = 
+B<< 
+B>> genmove b
+B<< = J4
+B<< 
+W>> play B J4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 50
+W<< y = 5
+W<< x = 5
+W<< new value = 50
+W<< = F6
+W<< 
+B>> play W F6
+B<< = 
+B<< 
+B>> genmove b
+B<< = F7
+B<< 
+W>> play B F7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 71
+W<< y = 7
+W<< x = 8
+W<< new value = 79
+W<< = J8
+W<< 
+B>> play W J8
+B<< = 
+B<< 
+B>> genmove b
+B<< = G8
+B<< 
+W>> play B G8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 79
+W<< y = 8
+W<< x = 7
+W<< new value = 71
+W<< = H9
+W<< 
+B>> play W H9
+B<< = 
+B<< 
+B>> genmove b
+B<< = D1
+B<< 
+W>> play B D1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 77
+W<< y = 8
+W<< x = 5
+W<< new value = 53
+W<< = F9
+W<< 
+B>> play W F9
+B<< = 
+B<< 
+B>> genmove b
+B<< = G9
+B<< 
+W>> play B G9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 34
+W<< y = 3
+W<< x = 7
+W<< new value = 66
+W<< = H4
+W<< 
+B>> play W H4
+B<< = 
+B<< 
+B>> genmove b
+B<< = J1
+B<< 
+W>> play B J1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 9
+W<< y = 1
+W<< x = 0
+W<< new value = 1
+W<< = A2
+W<< 
+B>> play W A2
+B<< = 
+B<< 
+B>> genmove b
+B<< = E9
+B<< 
+W>> play B E9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 1
+W<< y = 0
+W<< x = 1
+W<< new value = 9
+W<< = B1
+W<< 
+B>> play W B1
+B<< = 
+B<< 
+B>> genmove b
+B<< = C6
+B<< 
+W>> play B C6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 73
+W<< y = 8
+W<< x = 1
+W<< new value = 17
+W<< = B9
+W<< 
+B>> play W B9
+B<< = 
+B<< 
+B>> genmove b
+B<< = D3
+B<< 
+W>> play B D3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 63
+W<< y = 7
+W<< x = 0
+W<< new value = 7
+W<< = A8
+W<< 
+B>> play W A8
+B<< = 
+B<< 
+B>> genmove b
+B<< = F3
+B<< 
+W>> play B F3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 65
+W<< y = 7
+W<< x = 2
+W<< new value = 25
+W<< = C8
+W<< 
+B>> play W C8
+B<< = 
+B<< 
+B>> genmove b
+B<< = B8
+B<< 
+W>> play B B8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 66
+W<< y = 7
+W<< x = 3
+W<< new value = 34
+W<< = D8
+W<< 
+B>> play W D8
+B<< = 
+B<< 
+B>> genmove b
+B<< = D7
+B<< 
+W>> play B D7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 45
+W<< y = 5
+W<< x = 0
+W<< new value = 5
+W<< = A6
+W<< 
+B>> play W A6
+B<< = 
+B<< 
+B>> genmove b
+B<< = C9
+B<< 
+W>> play B C9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 19
+W<< y = 2
+W<< x = 1
+W<< new value = 11
+W<< = B3
+W<< 
+B>> play W B3
+B<< = 
+B<< 
+B>> genmove b
+B<< = C4
+B<< 
+W>> play B C4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 11
+W<< y = 1
+W<< x = 2
+W<< new value = 19
+W<< = C2
+W<< 
+B>> play W C2
+B<< = 
+B<< 
+B>> genmove b
+B<< = G1
+B<< 
+W>> play B G1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 26
+W<< y = 2
+W<< x = 8
+W<< new value = 74
+W<< = J3
+W<< 
+B>> play W J3
+B<< = 
+B<< 
+B>> genmove b
+B<< = A7
+B<< 
+W>> play B A7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 7
+W<< y = 0
+W<< x = 7
+W<< new value = 63
+W<< = H1
+W<< 
+B>> play W H1
+B<< = 
+B<< 
+B>> genmove b
+B<< = G4
+B<< 
+W>> play B G4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 62
+W<< y = 6
+W<< x = 8
+W<< new value = 78
+W<< = J7
+W<< 
+B>> play W J7
+B<< = 
+B<< 
+B>> genmove b
+B<< = F1
+B<< 
+W>> play B F1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 15
+W<< y = 1
+W<< x = 6
+W<< new value = 55
+W<< = G2
+W<< 
+B>> play W G2
+B<< = 
+B<< 
+B>> genmove b
+B<< = B7
+B<< 
+W>> play B B7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 70
+W<< y = 7
+W<< x = 7
+W<< new value = 70
+W<< = H8
+W<< 
+B>> play W H8
+B<< = 
+B<< 
+B>> genmove b
+B<< = J2
+B<< 
+W>> play B J2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 28
+W<< y = 3
+W<< x = 1
+W<< new value = 12
+W<< = B4
+W<< 
+B>> play W B4
+B<< = 
+B<< 
+B>> genmove b
+B<< = C3
+B<< 
+W>> play B C3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 14
+W<< y = 1
+W<< x = 5
+W<< new value = 46
+W<< = F2
+W<< 
+B>> play W F2
+B<< = 
+B<< 
+B>> genmove b
+B<< = G3
+B<< 
+W>> play B G3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 2
+W<< y = 0
+W<< x = 2
+W<< new value = 18
+W<< = C1
+W<< 
+B>> play W C1
+B<< = 
+B<< 
+B>> genmove b
+B<< = A4
+B<< 
+W>> play B A4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 10
+W<< y = 1
+W<< x = 1
+W<< new value = 10
+W<< = B2
+W<< 
+B>> play W B2
+B<< = 
+B<< 
+B>> genmove b
+B<< = G7
+B<< 
+W>> play B G7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 31
+W<< y = 3
+W<< x = 4
+W<< new value = 39
+W<< = E4
+W<< 
+B>> play W E4
+B<< = 
+B<< 
+B>> genmove b
+B<< = J5
+B<< 
+W>> play B J5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 49
+W<< y = 5
+W<< x = 4
+W<< new value = 41
+W<< = E6
+W<< 
+B>> play W E6
+B<< = 
+B<< 
+B>> genmove b
+B<< = D2
+B<< 
+W>> play B D2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 39
+W<< y = 4
+W<< x = 3
+W<< new value = 31
+W<< = D5
+W<< 
+B>> play W D5
+B<< = 
+B<< 
+B>> genmove b
+B<< = C7
+B<< 
+W>> play B C7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 0
+W<< y = 0
+W<< x = 0
+W<< new value = 0
+W<< = A1
+W<< 
+B>> play W A1
+B<< = 
+B<< 
+B>> genmove b
+B<< = H6
+B<< 
+W>> play B H6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 68
+W<< y = 7
+W<< x = 5
+W<< new value = 52
+W<< = resign
+W<< 
+============================================
+Game 4
+============================================
+B>> boardsize 9
+B<< = 
+B<< 
+B>> clear_board
+B<< = 
+B<< 
+W>> boardsize 9
+W<< = 
+W<< 
+W>> clear_board
+W<< = 
+W<< 
+B>> genmove b
+B<< = D9
+B<< 
+W>> play B D9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 40
+W<< y = 4
+W<< x = 4
+W<< new value = 40
+W<< = E5
+W<< 
+B>> play W E5
+B<< = 
+B<< 
+B>> genmove b
+B<< = A5
+B<< 
+W>> play B A5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 48
+W<< y = 5
+W<< x = 3
+W<< new value = 32
+W<< = D6
+W<< 
+B>> play W D6
+B<< = 
+B<< 
+B>> genmove b
+B<< = E1
+B<< 
+W>> play B E1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 32
+W<< y = 3
+W<< x = 5
+W<< new value = 48
+W<< = F4
+W<< 
+B>> play W F4
+B<< = 
+B<< 
+B>> genmove b
+B<< = E6
+B<< 
+W>> play B E6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 30
+W<< y = 3
+W<< x = 3
+W<< new value = 30
+W<< = D4
+W<< 
+B>> play W D4
+B<< = 
+B<< 
+B>> genmove b
+B<< = C6
+B<< 
+W>> play B C6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 7
+W<< y = 0
+W<< x = 7
+W<< new value = 63
+W<< = H1
+W<< 
+B>> play W H1
+B<< = 
+B<< 
+B>> genmove b
+B<< = F3
+B<< 
+W>> play B F3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 73
+W<< y = 8
+W<< x = 1
+W<< new value = 17
+W<< = B9
+W<< 
+B>> play W B9
+B<< = 
+B<< 
+B>> genmove b
+B<< = F9
+B<< 
+W>> play B F9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 63
+W<< y = 7
+W<< x = 0
+W<< new value = 7
+W<< = A8
+W<< 
+B>> play W A8
+B<< = 
+B<< 
+B>> genmove b
+B<< = B8
+B<< 
+W>> play B B8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 17
+W<< y = 1
+W<< x = 8
+W<< new value = 73
+W<< = J2
+W<< 
+B>> play W J2
+B<< = 
+B<< 
+B>> genmove b
+B<< = D2
+B<< 
+W>> play B D2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 25
+W<< y = 2
+W<< x = 7
+W<< new value = 65
+W<< = H3
+W<< 
+B>> play W H3
+B<< = 
+B<< 
+B>> genmove b
+B<< = J3
+B<< 
+W>> play B J3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 15
+W<< y = 1
+W<< x = 6
+W<< new value = 55
+W<< = G2
+W<< 
+B>> play W G2
+B<< = 
+B<< 
+B>> genmove b
+B<< = G1
+B<< 
+W>> play B G1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 65
+W<< y = 7
+W<< x = 2
+W<< new value = 25
+W<< = C8
+W<< 
+B>> play W C8
+B<< = 
+B<< 
+B>> genmove b
+B<< = C1
+B<< 
+W>> play B C1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 9
+W<< y = 1
+W<< x = 0
+W<< new value = 1
+W<< = A2
+W<< 
+B>> play W A2
+B<< = 
+B<< 
+B>> genmove b
+B<< = C4
+B<< 
+W>> play B C4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 1
+W<< y = 0
+W<< x = 1
+W<< new value = 9
+W<< = B1
+W<< 
+B>> play W B1
+B<< = 
+B<< 
+B>> genmove b
+B<< = B2
+B<< 
+W>> play B B2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 19
+W<< y = 2
+W<< x = 1
+W<< new value = 11
+W<< = B3
+W<< 
+B>> play W B3
+B<< = 
+B<< 
+B>> genmove b
+B<< = J7
+B<< 
+W>> play B J7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 79
+W<< y = 8
+W<< x = 7
+W<< new value = 71
+W<< = H9
+W<< 
+B>> play W H9
+B<< = 
+B<< 
+B>> genmove b
+B<< = A3
+B<< 
+W>> play B A3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 45
+W<< y = 5
+W<< x = 0
+W<< new value = 5
+W<< = A6
+W<< 
+B>> play W A6
+B<< = 
+B<< 
+B>> genmove b
+B<< = H6
+B<< 
+W>> play B H6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 71
+W<< y = 7
+W<< x = 8
+W<< new value = 79
+W<< = J8
+W<< 
+B>> play W J8
+B<< = 
+B<< 
+B>> genmove b
+B<< = G4
+B<< 
+W>> play B G4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 69
+W<< y = 7
+W<< x = 6
+W<< new value = 61
+W<< = G8
+W<< 
+B>> play W G8
+B<< = 
+B<< 
+B>> genmove b
+B<< = D3
+B<< 
+W>> play B D3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 66
+W<< y = 7
+W<< x = 3
+W<< new value = 34
+W<< = D8
+W<< 
+B>> play W D8
+B<< = 
+B<< 
+B>> genmove b
+B<< = H8
+B<< 
+W>> play B H8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 68
+W<< y = 7
+W<< x = 5
+W<< new value = 52
+W<< = F8
+W<< 
+B>> play W F8
+B<< = 
+B<< 
+B>> genmove b
+B<< = J5
+B<< 
+W>> play B J5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 51
+W<< y = 5
+W<< x = 6
+W<< new value = 59
+W<< = G6
+W<< 
+B>> play W G6
+B<< = 
+B<< 
+B>> genmove b
+B<< = F5
+B<< 
+W>> play B F5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 14
+W<< y = 1
+W<< x = 5
+W<< new value = 46
+W<< = F2
+W<< 
+B>> play W F2
+B<< = 
+B<< 
+B>> genmove b
+B<< = D7
+B<< 
+W>> play B D7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 59
+W<< y = 6
+W<< x = 5
+W<< new value = 51
+W<< = F7
+W<< 
+B>> play W F7
+B<< = 
+B<< 
+B>> genmove b
+B<< = G3
+B<< 
+W>> play B G3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 74
+W<< y = 8
+W<< x = 2
+W<< new value = 26
+W<< = C9
+W<< 
+B>> play W C9
+B<< = 
+B<< 
+B>> genmove b
+B<< = G9
+B<< 
+W>> play B G9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 8
+W<< y = 0
+W<< x = 8
+W<< new value = 72
+W<< = J1
+W<< 
+B>> play W J1
+B<< = 
+B<< 
+B>> genmove b
+B<< = B6
+B<< 
+W>> play B B6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 39
+W<< y = 4
+W<< x = 3
+W<< new value = 31
+W<< = D5
+W<< 
+B>> play W D5
+B<< = 
+B<< 
+B>> genmove b
+B<< = H4
+B<< 
+W>> play B H4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 16
+W<< y = 1
+W<< x = 7
+W<< new value = 64
+W<< = H2
+W<< 
+B>> play W H2
+B<< = 
+B<< 
+B>> genmove b
+B<< = C2
+B<< 
+W>> play B C2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 20
+W<< y = 2
+W<< x = 2
+W<< new value = 20
+W<< = C3
+W<< 
+B>> play W C3
+B<< = 
+B<< 
+B>> genmove b
+B<< = J4
+B<< 
+W>> play B J4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 60
+W<< y = 6
+W<< x = 6
+W<< new value = 60
+W<< = G7
+W<< 
+B>> play W G7
+B<< = 
+B<< 
+B>> genmove b
+B<< = H7
+B<< 
+W>> play B H7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 54
+W<< y = 6
+W<< x = 0
+W<< new value = 6
+W<< = A7
+W<< 
+B>> play W A7
+B<< = 
+B<< 
+B>> genmove b
+B<< = A4
+B<< 
+W>> play B A4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 72
+W<< y = 8
+W<< x = 0
+W<< new value = 8
+W<< = A9
+W<< 
+B>> play W A9
+B<< = 
+B<< 
+B>> genmove b
+B<< = C7
+B<< 
+W>> play B C7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 3
+W<< y = 0
+W<< x = 3
+W<< new value = 27
+W<< = resign
+W<< 
+============================================
+Game 5
+============================================
+B>> boardsize 9
+B<< = 
+B<< 
+B>> clear_board
+B<< = 
+B<< 
+W>> boardsize 9
+W<< = 
+W<< 
+W>> clear_board
+W<< = 
+W<< 
+B>> genmove b
+B<< = J5
+B<< 
+W>> play B J5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 40
+W<< y = 4
+W<< x = 4
+W<< new value = 40
+W<< = E5
+W<< 
+B>> play W E5
+B<< = 
+B<< 
+B>> genmove b
+B<< = C9
+B<< 
+W>> play B C9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 48
+W<< y = 5
+W<< x = 3
+W<< new value = 32
+W<< = D6
+W<< 
+B>> play W D6
+B<< = 
+B<< 
+B>> genmove b
+B<< = F6
+B<< 
+W>> play B F6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 30
+W<< y = 3
+W<< x = 3
+W<< new value = 30
+W<< = D4
+W<< 
+B>> play W D4
+B<< = 
+B<< 
+B>> genmove b
+B<< = F1
+B<< 
+W>> play B F1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 32
+W<< y = 3
+W<< x = 5
+W<< new value = 48
+W<< = F4
+W<< 
+B>> play W F4
+B<< = 
+B<< 
+B>> genmove b
+B<< = A8
+B<< 
+W>> play B A8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 17
+W<< y = 1
+W<< x = 8
+W<< new value = 73
+W<< = J2
+W<< 
+B>> play W J2
+B<< = 
+B<< 
+B>> genmove b
+B<< = A4
+B<< 
+W>> play B A4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 73
+W<< y = 8
+W<< x = 1
+W<< new value = 17
+W<< = B9
+W<< 
+B>> play W B9
+B<< = 
+B<< 
+B>> genmove b
+B<< = D3
+B<< 
+W>> play B D3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 9
+W<< y = 1
+W<< x = 0
+W<< new value = 1
+W<< = A2
+W<< 
+B>> play W A2
+B<< = 
+B<< 
+B>> genmove b
+B<< = C6
+B<< 
+W>> play B C6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 1
+W<< y = 0
+W<< x = 1
+W<< new value = 9
+W<< = B1
+W<< 
+B>> play W B1
+B<< = 
+B<< 
+B>> genmove b
+B<< = G4
+B<< 
+W>> play B G4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 19
+W<< y = 2
+W<< x = 1
+W<< new value = 11
+W<< = B3
+W<< 
+B>> play W B3
+B<< = 
+B<< 
+B>> genmove b
+B<< = D1
+B<< 
+W>> play B D1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 11
+W<< y = 1
+W<< x = 2
+W<< new value = 19
+W<< = C2
+W<< 
+B>> play W C2
+B<< = 
+B<< 
+B>> genmove b
+B<< = J1
+B<< 
+W>> play B J1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 14
+W<< y = 1
+W<< x = 5
+W<< new value = 46
+W<< = F2
+W<< 
+B>> play W F2
+B<< = 
+B<< 
+B>> genmove b
+B<< = J8
+B<< 
+W>> play B J8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 55
+W<< y = 6
+W<< x = 1
+W<< new value = 15
+W<< = B7
+W<< 
+B>> play W B7
+B<< = 
+B<< 
+B>> genmove b
+B<< = F3
+B<< 
+W>> play B F3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 45
+W<< y = 5
+W<< x = 0
+W<< new value = 5
+W<< = A6
+W<< 
+B>> play W A6
+B<< = 
+B<< 
+B>> genmove b
+B<< = C4
+B<< 
+W>> play B C4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 59
+W<< y = 6
+W<< x = 5
+W<< new value = 51
+W<< = F7
+W<< 
+B>> play W F7
+B<< = 
+B<< 
+B>> genmove b
+B<< = D7
+B<< 
+W>> play B D7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 6
+W<< y = 0
+W<< x = 6
+W<< new value = 54
+W<< = G1
+W<< 
+B>> play W G1
+B<< = 
+B<< 
+B>> genmove b
+B<< = H9
+B<< 
+W>> play B H9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 25
+W<< y = 2
+W<< x = 7
+W<< new value = 65
+W<< = H3
+W<< 
+B>> play W H3
+B<< = 
+B<< 
+B>> genmove b
+B<< = G8
+B<< 
+W>> play B G8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 35
+W<< y = 3
+W<< x = 8
+W<< new value = 75
+W<< = J4
+W<< 
+B>> play W J4
+B<< = 
+B<< 
+B>> genmove b
+B<< = F9
+B<< 
+W>> play B F9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 52
+W<< y = 5
+W<< x = 7
+W<< new value = 68
+W<< = H6
+W<< 
+B>> play W H6
+B<< = 
+B<< 
+B>> genmove b
+B<< = H7
+B<< 
+W>> play B H7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 62
+W<< y = 6
+W<< x = 8
+W<< new value = 78
+W<< = J7
+W<< 
+B>> play W J7
+B<< = 
+B<< 
+B>> genmove b
+B<< = D9
+B<< 
+W>> play B D9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 65
+W<< y = 7
+W<< x = 2
+W<< new value = 25
+W<< = C8
+W<< 
+B>> play W C8
+B<< = 
+B<< 
+B>> genmove b
+B<< = G7
+B<< 
+W>> play B G7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 15
+W<< y = 1
+W<< x = 6
+W<< new value = 55
+W<< = G2
+W<< 
+B>> play W G2
+B<< = 
+B<< 
+B>> genmove b
+B<< = D2
+B<< 
+W>> play B D2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 2
+W<< y = 0
+W<< x = 2
+W<< new value = 18
+W<< = C1
+W<< 
+B>> play W C1
+B<< = 
+B<< 
+B>> genmove b
+B<< = A3
+B<< 
+W>> play B A3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 28
+W<< y = 3
+W<< x = 1
+W<< new value = 12
+W<< = B4
+W<< 
+B>> play W B4
+B<< = 
+B<< 
+B>> genmove b
+B<< = C3
+B<< 
+W>> play B C3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 66
+W<< y = 7
+W<< x = 3
+W<< new value = 34
+W<< = D8
+W<< 
+B>> play W D8
+B<< = 
+B<< 
+B>> genmove b
+B<< = G6
+B<< 
+W>> play B G6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 46
+W<< y = 5
+W<< x = 1
+W<< new value = 14
+W<< = B6
+W<< 
+B>> play W B6
+B<< = 
+B<< 
+B>> genmove b
+B<< = A7
+B<< 
+W>> play B A7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 64
+W<< y = 7
+W<< x = 1
+W<< new value = 16
+W<< = B8
+W<< 
+B>> play W B8
+B<< = 
+B<< 
+B>> genmove b
+B<< = F5
+B<< 
+W>> play B F5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 16
+W<< y = 1
+W<< x = 7
+W<< new value = 64
+W<< = H2
+W<< 
+B>> play W H2
+B<< = 
+B<< 
+B>> genmove b
+B<< = G3
+B<< 
+W>> play B G3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 26
+W<< y = 2
+W<< x = 8
+W<< new value = 74
+W<< = J3
+W<< 
+B>> play W J3
+B<< = 
+B<< 
+B>> genmove b
+B<< = E6
+B<< 
+W>> play B E6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 0
+W<< y = 0
+W<< x = 0
+W<< new value = 0
+W<< = A1
+W<< 
+B>> play W A1
+B<< = 
+B<< 
+B>> genmove b
+B<< = G9
+B<< 
+W>> play B G9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 39
+W<< y = 4
+W<< x = 3
+W<< new value = 31
+W<< = D5
+W<< 
+B>> play W D5
+B<< = 
+B<< 
+B>> genmove b
+B<< = H8
+B<< 
+W>> play B H8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 6
+W<< y = 0
+W<< x = 6
+W<< new value = 54
+W<< = resign
+W<< 
+============================================
+Game 6
+============================================
+B>> boardsize 9
+B<< = 
+B<< 
+B>> clear_board
+B<< = 
+B<< 
+W>> boardsize 9
+W<< = 
+W<< 
+W>> clear_board
+W<< = 
+W<< 
+B>> genmove b
+B<< = J2
+B<< 
+W>> play B J2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 40
+W<< y = 4
+W<< x = 4
+W<< new value = 40
+W<< = E5
+W<< 
+B>> play W E5
+B<< = 
+B<< 
+B>> genmove b
+B<< = A8
+B<< 
+W>> play B A8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 32
+W<< y = 3
+W<< x = 5
+W<< new value = 48
+W<< = F4
+W<< 
+B>> play W F4
+B<< = 
+B<< 
+B>> genmove b
+B<< = A6
+B<< 
+W>> play B A6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 48
+W<< y = 5
+W<< x = 3
+W<< new value = 32
+W<< = D6
+W<< 
+B>> play W D6
+B<< = 
+B<< 
+B>> genmove b
+B<< = C4
+B<< 
+W>> play B C4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 50
+W<< y = 5
+W<< x = 5
+W<< new value = 50
+W<< = F6
+W<< 
+B>> play W F6
+B<< = 
+B<< 
+B>> genmove b
+B<< = D5
+B<< 
+W>> play B D5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 73
+W<< y = 8
+W<< x = 1
+W<< new value = 17
+W<< = B9
+W<< 
+B>> play W B9
+B<< = 
+B<< 
+B>> genmove b
+B<< = D7
+B<< 
+W>> play B D7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 65
+W<< y = 7
+W<< x = 2
+W<< new value = 25
+W<< = C8
+W<< 
+B>> play W C8
+B<< = 
+B<< 
+B>> genmove b
+B<< = E9
+B<< 
+W>> play B E9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 55
+W<< y = 6
+W<< x = 1
+W<< new value = 15
+W<< = B7
+W<< 
+B>> play W B7
+B<< = 
+B<< 
+B>> genmove b
+B<< = F3
+B<< 
+W>> play B F3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 7
+W<< y = 0
+W<< x = 7
+W<< new value = 63
+W<< = H1
+W<< 
+B>> play W H1
+B<< = 
+B<< 
+B>> genmove b
+B<< = J4
+B<< 
+W>> play B J4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 15
+W<< y = 1
+W<< x = 6
+W<< new value = 55
+W<< = G2
+W<< 
+B>> play W G2
+B<< = 
+B<< 
+B>> genmove b
+B<< = A4
+B<< 
+W>> play B A4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 5
+W<< y = 0
+W<< x = 5
+W<< new value = 45
+W<< = F1
+W<< 
+B>> play W F1
+B<< = 
+B<< 
+B>> genmove b
+B<< = B3
+B<< 
+W>> play B B3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 25
+W<< y = 2
+W<< x = 7
+W<< new value = 65
+W<< = H3
+W<< 
+B>> play W H3
+B<< = 
+B<< 
+B>> genmove b
+B<< = J6
+B<< 
+W>> play B J6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 52
+W<< y = 5
+W<< x = 7
+W<< new value = 68
+W<< = H6
+W<< 
+B>> play W H6
+B<< = 
+B<< 
+B>> genmove b
+B<< = A2
+B<< 
+W>> play B A2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 3
+W<< y = 0
+W<< x = 3
+W<< new value = 27
+W<< = D1
+W<< 
+B>> play W D1
+B<< = 
+B<< 
+B>> genmove b
+B<< = C1
+B<< 
+W>> play B C1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 1
+W<< y = 0
+W<< x = 1
+W<< new value = 9
+W<< = B1
+W<< 
+B>> play W B1
+B<< = 
+B<< 
+B>> genmove b
+B<< = B2
+B<< 
+W>> play B B2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 34
+W<< y = 3
+W<< x = 7
+W<< new value = 66
+W<< = H4
+W<< 
+B>> play W H4
+B<< = 
+B<< 
+B>> genmove b
+B<< = J9
+B<< 
+W>> play B J9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 60
+W<< y = 6
+W<< x = 6
+W<< new value = 60
+W<< = G7
+W<< 
+B>> play W G7
+B<< = 
+B<< 
+B>> genmove b
+B<< = F7
+B<< 
+W>> play B F7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 75
+W<< y = 8
+W<< x = 3
+W<< new value = 35
+W<< = D9
+W<< 
+B>> play W D9
+B<< = 
+B<< 
+B>> genmove b
+B<< = D8
+B<< 
+W>> play B D8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 20
+W<< y = 2
+W<< x = 2
+W<< new value = 20
+W<< = C3
+W<< 
+B>> play W C3
+B<< = 
+B<< 
+B>> genmove b
+B<< = G3
+B<< 
+W>> play B G3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 46
+W<< y = 5
+W<< x = 1
+W<< new value = 14
+W<< = B6
+W<< 
+B>> play W B6
+B<< = 
+B<< 
+B>> genmove b
+B<< = H7
+B<< 
+W>> play B H7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 12
+W<< y = 1
+W<< x = 3
+W<< new value = 28
+W<< = D2
+W<< 
+B>> play W D2
+B<< = 
+B<< 
+B>> genmove b
+B<< = G8
+B<< 
+W>> play B G8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 79
+W<< y = 8
+W<< x = 7
+W<< new value = 71
+W<< = H9
+W<< 
+B>> play W H9
+B<< = 
+B<< 
+B>> genmove b
+B<< = A9
+B<< 
+W>> play B A9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 62
+W<< y = 6
+W<< x = 8
+W<< new value = 78
+W<< = J7
+W<< 
+B>> play W J7
+B<< = 
+B<< 
+B>> genmove b
+B<< = B8
+B<< 
+W>> play B B8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 26
+W<< y = 2
+W<< x = 8
+W<< new value = 74
+W<< = J3
+W<< 
+B>> play W J3
+B<< = 
+B<< 
+B>> genmove b
+B<< = C7
+B<< 
+W>> play B C7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 78
+W<< y = 8
+W<< x = 6
+W<< new value = 62
+W<< = G9
+W<< 
+B>> play W G9
+B<< = 
+B<< 
+B>> genmove b
+B<< = H2
+B<< 
+W>> play B H2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 31
+W<< y = 3
+W<< x = 4
+W<< new value = 39
+W<< = E4
+W<< 
+B>> play W E4
+B<< = 
+B<< 
+B>> genmove b
+B<< = A7
+B<< 
+W>> play B A7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 49
+W<< y = 5
+W<< x = 4
+W<< new value = 41
+W<< = E6
+W<< 
+B>> play W E6
+B<< = 
+B<< 
+B>> genmove b
+B<< = D3
+B<< 
+W>> play B D3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 33
+W<< y = 3
+W<< x = 6
+W<< new value = 57
+W<< = G4
+W<< 
+B>> play W G4
+B<< = 
+B<< 
+B>> genmove b
+B<< = A5
+B<< 
+W>> play B A5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 4
+W<< y = 0
+W<< x = 4
+W<< new value = 36
+W<< = E1
+W<< 
+B>> play W E1
+B<< = 
+B<< 
+B>> genmove b
+B<< = F9
+B<< 
+W>> play B F9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 6
+W<< y = 0
+W<< x = 6
+W<< new value = 54
+W<< = G1
+W<< 
+B>> play W G1
+B<< = 
+B<< 
+B>> genmove b
+B<< = F8
+B<< 
+W>> play B F8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 51
+W<< y = 5
+W<< x = 6
+W<< new value = 59
+W<< = G6
+W<< 
+B>> play W G6
+B<< = 
+B<< 
+B>> genmove b
+B<< = B4
+B<< 
+W>> play B B4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 41
+W<< y = 4
+W<< x = 5
+W<< new value = 49
+W<< = F5
+W<< 
+B>> play W F5
+B<< = 
+B<< 
+B>> genmove b
+B<< = A3
+B<< 
+W>> play B A3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 15
+W<< y = 1
+W<< x = 6
+W<< new value = 55
+W<< = resign
+W<< 
+============================================
+Game 7
+============================================
+B>> boardsize 9
+B<< = 
+B<< 
+B>> clear_board
+B<< = 
+B<< 
+W>> boardsize 9
+W<< = 
+W<< 
+W>> clear_board
+W<< = 
+W<< 
+B>> genmove b
+B<< = B6
+B<< 
+W>> play B B6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 40
+W<< y = 4
+W<< x = 4
+W<< new value = 40
+W<< = E5
+W<< 
+B>> play W E5
+B<< = 
+B<< 
+B>> genmove b
+B<< = A8
+B<< 
+W>> play B A8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 48
+W<< y = 5
+W<< x = 3
+W<< new value = 32
+W<< = D6
+W<< 
+B>> play W D6
+B<< = 
+B<< 
+B>> genmove b
+B<< = G3
+B<< 
+W>> play B G3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 32
+W<< y = 3
+W<< x = 5
+W<< new value = 48
+W<< = F4
+W<< 
+B>> play W F4
+B<< = 
+B<< 
+B>> genmove b
+B<< = A5
+B<< 
+W>> play B A5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 9
+W<< y = 1
+W<< x = 0
+W<< new value = 1
+W<< = A2
+W<< 
+B>> play W A2
+B<< = 
+B<< 
+B>> genmove b
+B<< = E4
+B<< 
+W>> play B E4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 50
+W<< y = 5
+W<< x = 5
+W<< new value = 50
+W<< = F6
+W<< 
+B>> play W F6
+B<< = 
+B<< 
+B>> genmove b
+B<< = D1
+B<< 
+W>> play B D1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 1
+W<< y = 0
+W<< x = 1
+W<< new value = 9
+W<< = B1
+W<< 
+B>> play W B1
+B<< = 
+B<< 
+B>> genmove b
+B<< = E9
+B<< 
+W>> play B E9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 73
+W<< y = 8
+W<< x = 1
+W<< new value = 17
+W<< = B9
+W<< 
+B>> play W B9
+B<< = 
+B<< 
+B>> genmove b
+B<< = J5
+B<< 
+W>> play B J5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 71
+W<< y = 7
+W<< x = 8
+W<< new value = 79
+W<< = J8
+W<< 
+B>> play W J8
+B<< = 
+B<< 
+B>> genmove b
+B<< = F7
+B<< 
+W>> play B F7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 79
+W<< y = 8
+W<< x = 7
+W<< new value = 71
+W<< = H9
+W<< 
+B>> play W H9
+B<< = 
+B<< 
+B>> genmove b
+B<< = G1
+B<< 
+W>> play B G1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 61
+W<< y = 6
+W<< x = 7
+W<< new value = 69
+W<< = H7
+W<< 
+B>> play W H7
+B<< = 
+B<< 
+B>> genmove b
+B<< = C7
+B<< 
+W>> play B C7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 69
+W<< y = 7
+W<< x = 6
+W<< new value = 61
+W<< = G8
+W<< 
+B>> play W G8
+B<< = 
+B<< 
+B>> genmove b
+B<< = J7
+B<< 
+W>> play B J7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 17
+W<< y = 1
+W<< x = 8
+W<< new value = 73
+W<< = J2
+W<< 
+B>> play W J2
+B<< = 
+B<< 
+B>> genmove b
+B<< = F2
+B<< 
+W>> play B F2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 7
+W<< y = 0
+W<< x = 7
+W<< new value = 63
+W<< = H1
+W<< 
+B>> play W H1
+B<< = 
+B<< 
+B>> genmove b
+B<< = G6
+B<< 
+W>> play B G6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 34
+W<< y = 3
+W<< x = 7
+W<< new value = 66
+W<< = H4
+W<< 
+B>> play W H4
+B<< = 
+B<< 
+B>> genmove b
+B<< = H2
+B<< 
+W>> play B H2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 77
+W<< y = 8
+W<< x = 5
+W<< new value = 53
+W<< = F9
+W<< 
+B>> play W F9
+B<< = 
+B<< 
+B>> genmove b
+B<< = J3
+B<< 
+W>> play B J3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 66
+W<< y = 7
+W<< x = 3
+W<< new value = 34
+W<< = D8
+W<< 
+B>> play W D8
+B<< = 
+B<< 
+B>> genmove b
+B<< = A3
+B<< 
+W>> play B A3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 11
+W<< y = 1
+W<< x = 2
+W<< new value = 19
+W<< = C2
+W<< 
+B>> play W C2
+B<< = 
+B<< 
+B>> genmove b
+B<< = B2
+B<< 
+W>> play B B2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 21
+W<< y = 2
+W<< x = 3
+W<< new value = 29
+W<< = D3
+W<< 
+B>> play W D3
+B<< = 
+B<< 
+B>> genmove b
+B<< = C1
+B<< 
+W>> play B C1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 29
+W<< y = 3
+W<< x = 2
+W<< new value = 21
+W<< = C4
+W<< 
+B>> play W C4
+B<< = 
+B<< 
+B>> genmove b
+B<< = G7
+B<< 
+W>> play B G7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 5
+W<< y = 0
+W<< x = 5
+W<< new value = 45
+W<< = F1
+W<< 
+B>> play W F1
+B<< = 
+B<< 
+B>> genmove b
+B<< = H6
+B<< 
+W>> play B H6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 35
+W<< y = 3
+W<< x = 8
+W<< new value = 75
+W<< = J4
+W<< 
+B>> play W J4
+B<< = 
+B<< 
+B>> genmove b
+B<< = D7
+B<< 
+W>> play B D7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 23
+W<< y = 2
+W<< x = 5
+W<< new value = 47
+W<< = F3
+W<< 
+B>> play W F3
+B<< = 
+B<< 
+B>> genmove b
+B<< = B4
+B<< 
+W>> play B B4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 33
+W<< y = 3
+W<< x = 6
+W<< new value = 57
+W<< = G4
+W<< 
+B>> play W G4
+B<< = 
+B<< 
+B>> genmove b
+B<< = A7
+B<< 
+W>> play B A7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 55
+W<< y = 6
+W<< x = 1
+W<< new value = 15
+W<< = B7
+W<< 
+B>> play W B7
+B<< = 
+B<< 
+B>> genmove b
+B<< = D9
+B<< 
+W>> play B D9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 65
+W<< y = 7
+W<< x = 2
+W<< new value = 25
+W<< = C8
+W<< 
+B>> play W C8
+B<< = 
+B<< 
+B>> genmove b
+B<< = D5
+B<< 
+W>> play B D5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 12
+W<< y = 1
+W<< x = 3
+W<< new value = 28
+W<< = D2
+W<< 
+B>> play W D2
+B<< = 
+B<< 
+B>> genmove b
+B<< = A9
+B<< 
+W>> play B A9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 20
+W<< y = 2
+W<< x = 2
+W<< new value = 20
+W<< = C3
+W<< 
+B>> play W C3
+B<< = 
+B<< 
+B>> genmove b
+B<< = H3
+B<< 
+W>> play B H3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 49
+W<< y = 5
+W<< x = 4
+W<< new value = 41
+W<< = E6
+W<< 
+B>> play W E6
+B<< = 
+B<< 
+B>> genmove b
+B<< = C6
+B<< 
+W>> play B C6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 68
+W<< y = 7
+W<< x = 5
+W<< new value = 52
+W<< = F8
+W<< 
+B>> play W F8
+B<< = 
+B<< 
+B>> genmove b
+B<< = A4
+B<< 
+W>> play B A4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 64
+W<< y = 7
+W<< x = 1
+W<< new value = 16
+W<< = B8
+W<< 
+B>> play W B8
+B<< = 
+B<< 
+B>> genmove b
+B<< = A6
+B<< 
+W>> play B A6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 80
+W<< y = 8
+W<< x = 8
+W<< new value = 80
+W<< = J9
+W<< 
+B>> play W J9
+B<< = 
+B<< 
+B>> genmove b
+B<< = resign
+B<< 
+============================================
+Game 8
+============================================
+B>> boardsize 9
+B<< = 
+B<< 
+B>> clear_board
+B<< = 
+B<< 
+W>> boardsize 9
+W<< = 
+W<< 
+W>> clear_board
+W<< = 
+W<< 
+B>> genmove b
+B<< = H4
+B<< 
+W>> play B H4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 40
+W<< y = 4
+W<< x = 4
+W<< new value = 40
+W<< = E5
+W<< 
+B>> play W E5
+B<< = 
+B<< 
+B>> genmove b
+B<< = J6
+B<< 
+W>> play B J6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 32
+W<< y = 3
+W<< x = 5
+W<< new value = 48
+W<< = F4
+W<< 
+B>> play W F4
+B<< = 
+B<< 
+B>> genmove b
+B<< = A8
+B<< 
+W>> play B A8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 48
+W<< y = 5
+W<< x = 3
+W<< new value = 32
+W<< = D6
+W<< 
+B>> play W D6
+B<< = 
+B<< 
+B>> genmove b
+B<< = D1
+B<< 
+W>> play B D1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 71
+W<< y = 7
+W<< x = 8
+W<< new value = 79
+W<< = J8
+W<< 
+B>> play W J8
+B<< = 
+B<< 
+B>> genmove b
+B<< = D5
+B<< 
+W>> play B D5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 50
+W<< y = 5
+W<< x = 5
+W<< new value = 50
+W<< = F6
+W<< 
+B>> play W F6
+B<< = 
+B<< 
+B>> genmove b
+B<< = H9
+B<< 
+W>> play B H9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 1
+W<< y = 0
+W<< x = 1
+W<< new value = 9
+W<< = B1
+W<< 
+B>> play W B1
+B<< = 
+B<< 
+B>> genmove b
+B<< = A1
+B<< 
+W>> play B A1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 73
+W<< y = 8
+W<< x = 1
+W<< new value = 17
+W<< = B9
+W<< 
+B>> play W B9
+B<< = 
+B<< 
+B>> genmove b
+B<< = A5
+B<< 
+W>> play B A5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 65
+W<< y = 7
+W<< x = 2
+W<< new value = 25
+W<< = C8
+W<< 
+B>> play W C8
+B<< = 
+B<< 
+B>> genmove b
+B<< = G6
+B<< 
+W>> play B G6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 55
+W<< y = 6
+W<< x = 1
+W<< new value = 15
+W<< = B7
+W<< 
+B>> play W B7
+B<< = 
+B<< 
+B>> genmove b
+B<< = D9
+B<< 
+W>> play B D9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 77
+W<< y = 8
+W<< x = 5
+W<< new value = 53
+W<< = F9
+W<< 
+B>> play W F9
+B<< = 
+B<< 
+B>> genmove b
+B<< = F8
+B<< 
+W>> play B F8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 61
+W<< y = 6
+W<< x = 7
+W<< new value = 69
+W<< = H7
+W<< 
+B>> play W H7
+B<< = 
+B<< 
+B>> genmove b
+B<< = C7
+B<< 
+W>> play B C7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 66
+W<< y = 7
+W<< x = 3
+W<< new value = 34
+W<< = D8
+W<< 
+B>> play W D8
+B<< = 
+B<< 
+B>> genmove b
+B<< = J3
+B<< 
+W>> play B J3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 69
+W<< y = 7
+W<< x = 6
+W<< new value = 61
+W<< = G8
+W<< 
+B>> play W G8
+B<< = 
+B<< 
+B>> genmove b
+B<< = J1
+B<< 
+W>> play B J1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 45
+W<< y = 5
+W<< x = 0
+W<< new value = 5
+W<< = A6
+W<< 
+B>> play W A6
+B<< = 
+B<< 
+B>> genmove b
+B<< = F3
+B<< 
+W>> play B F3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 11
+W<< y = 1
+W<< x = 2
+W<< new value = 19
+W<< = C2
+W<< 
+B>> play W C2
+B<< = 
+B<< 
+B>> genmove b
+B<< = F1
+B<< 
+W>> play B F1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 7
+W<< y = 0
+W<< x = 7
+W<< new value = 63
+W<< = H1
+W<< 
+B>> play W H1
+B<< = 
+B<< 
+B>> genmove b
+B<< = C3
+B<< 
+W>> play B C3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 28
+W<< y = 3
+W<< x = 1
+W<< new value = 12
+W<< = B4
+W<< 
+B>> play W B4
+B<< = 
+B<< 
+B>> genmove b
+B<< = D2
+B<< 
+W>> play B D2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 15
+W<< y = 1
+W<< x = 6
+W<< new value = 55
+W<< = G2
+W<< 
+B>> play W G2
+B<< = 
+B<< 
+B>> genmove b
+B<< = B2
+B<< 
+W>> play B B2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 18
+W<< y = 2
+W<< x = 0
+W<< new value = 2
+W<< = A3
+W<< 
+B>> play W A3
+B<< = 
+B<< 
+B>> genmove b
+B<< = G4
+B<< 
+W>> play B G4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 21
+W<< y = 2
+W<< x = 3
+W<< new value = 29
+W<< = D3
+W<< 
+B>> play W D3
+B<< = 
+B<< 
+B>> genmove b
+B<< = J5
+B<< 
+W>> play B J5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 25
+W<< y = 2
+W<< x = 7
+W<< new value = 65
+W<< = H3
+W<< 
+B>> play W H3
+B<< = 
+B<< 
+B>> genmove b
+B<< = J9
+B<< 
+W>> play B J9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 14
+W<< y = 1
+W<< x = 5
+W<< new value = 46
+W<< = F2
+W<< 
+B>> play W F2
+B<< = 
+B<< 
+B>> genmove b
+B<< = B6
+B<< 
+W>> play B B6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 6
+W<< y = 0
+W<< x = 6
+W<< new value = 54
+W<< = G1
+W<< 
+B>> play W G1
+B<< = 
+B<< 
+B>> genmove b
+B<< = G9
+B<< 
+W>> play B G9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 29
+W<< y = 3
+W<< x = 2
+W<< new value = 21
+W<< = C4
+W<< 
+B>> play W C4
+B<< = 
+B<< 
+B>> genmove b
+B<< = H2
+B<< 
+W>> play B H2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 74
+W<< y = 8
+W<< x = 2
+W<< new value = 26
+W<< = C9
+W<< 
+B>> play W C9
+B<< = 
+B<< 
+B>> genmove b
+B<< = A9
+B<< 
+W>> play B A9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 62
+W<< y = 6
+W<< x = 8
+W<< new value = 78
+W<< = J7
+W<< 
+B>> play W J7
+B<< = 
+B<< 
+B>> genmove b
+B<< = C6
+B<< 
+W>> play B C6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 31
+W<< y = 3
+W<< x = 4
+W<< new value = 39
+W<< = E4
+W<< 
+B>> play W E4
+B<< = 
+B<< 
+B>> genmove b
+B<< = J2
+B<< 
+W>> play B J2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 60
+W<< y = 6
+W<< x = 6
+W<< new value = 60
+W<< = G7
+W<< 
+B>> play W G7
+B<< = 
+B<< 
+B>> genmove b
+B<< = B3
+B<< 
+W>> play B B3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 49
+W<< y = 5
+W<< x = 4
+W<< new value = 41
+W<< = E6
+W<< 
+B>> play W E6
+B<< = 
+B<< 
+B>> genmove b
+B<< = B8
+B<< 
+W>> play B B8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 41
+W<< y = 4
+W<< x = 5
+W<< new value = 49
+W<< = F5
+W<< 
+B>> play W F5
+B<< = 
+B<< 
+B>> genmove b
+B<< = E1
+B<< 
+W>> play B E1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 68
+W<< y = 7
+W<< x = 5
+W<< new value = 52
+W<< = resign
+W<< 
+============================================
+Game 9
+============================================
+B>> boardsize 9
+B<< = 
+B<< 
+B>> clear_board
+B<< = 
+B<< 
+W>> boardsize 9
+W<< = 
+W<< 
+W>> clear_board
+W<< = 
+W<< 
+B>> genmove b
+B<< = J6
+B<< 
+W>> play B J6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 40
+W<< y = 4
+W<< x = 4
+W<< new value = 40
+W<< = E5
+W<< 
+B>> play W E5
+B<< = 
+B<< 
+B>> genmove b
+B<< = C1
+B<< 
+W>> play B C1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 30
+W<< y = 3
+W<< x = 3
+W<< new value = 30
+W<< = D4
+W<< 
+B>> play W D4
+B<< = 
+B<< 
+B>> genmove b
+B<< = A6
+B<< 
+W>> play B A6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 48
+W<< y = 5
+W<< x = 3
+W<< new value = 32
+W<< = D6
+W<< 
+B>> play W D6
+B<< = 
+B<< 
+B>> genmove b
+B<< = G6
+B<< 
+W>> play B G6
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 32
+W<< y = 3
+W<< x = 5
+W<< new value = 48
+W<< = F4
+W<< 
+B>> play W F4
+B<< = 
+B<< 
+B>> genmove b
+B<< = G9
+B<< 
+W>> play B G9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 50
+W<< y = 5
+W<< x = 5
+W<< new value = 50
+W<< = F6
+W<< 
+B>> play W F6
+B<< = 
+B<< 
+B>> genmove b
+B<< = F7
+B<< 
+W>> play B F7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 71
+W<< y = 7
+W<< x = 8
+W<< new value = 79
+W<< = J8
+W<< 
+B>> play W J8
+B<< = 
+B<< 
+B>> genmove b
+B<< = E1
+B<< 
+W>> play B E1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 1
+W<< y = 0
+W<< x = 1
+W<< new value = 9
+W<< = B1
+W<< 
+B>> play W B1
+B<< = 
+B<< 
+B>> genmove b
+B<< = A4
+B<< 
+W>> play B A4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 9
+W<< y = 1
+W<< x = 0
+W<< new value = 1
+W<< = A2
+W<< 
+B>> play W A2
+B<< = 
+B<< 
+B>> genmove b
+B<< = C4
+B<< 
+W>> play B C4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 19
+W<< y = 2
+W<< x = 1
+W<< new value = 11
+W<< = B3
+W<< 
+B>> play W B3
+B<< = 
+B<< 
+B>> genmove b
+B<< = D9
+B<< 
+W>> play B D9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 79
+W<< y = 8
+W<< x = 7
+W<< new value = 71
+W<< = H9
+W<< 
+B>> play W H9
+B<< = 
+B<< 
+B>> genmove b
+B<< = B2
+B<< 
+W>> play B B2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 61
+W<< y = 6
+W<< x = 7
+W<< new value = 69
+W<< = H7
+W<< 
+B>> play W H7
+B<< = 
+B<< 
+B>> genmove b
+B<< = J4
+B<< 
+W>> play B J4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 34
+W<< y = 3
+W<< x = 7
+W<< new value = 66
+W<< = H4
+W<< 
+B>> play W H4
+B<< = 
+B<< 
+B>> genmove b
+B<< = D3
+B<< 
+W>> play B D3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 46
+W<< y = 5
+W<< x = 1
+W<< new value = 14
+W<< = B6
+W<< 
+B>> play W B6
+B<< = 
+B<< 
+B>> genmove b
+B<< = H8
+B<< 
+W>> play B H8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 7
+W<< y = 0
+W<< x = 7
+W<< new value = 63
+W<< = H1
+W<< 
+B>> play W H1
+B<< = 
+B<< 
+B>> genmove b
+B<< = A9
+B<< 
+W>> play B A9
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 56
+W<< y = 6
+W<< x = 2
+W<< new value = 24
+W<< = C7
+W<< 
+B>> play W C7
+B<< = 
+B<< 
+B>> genmove b
+B<< = B7
+B<< 
+W>> play B B7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 66
+W<< y = 7
+W<< x = 3
+W<< new value = 34
+W<< = D8
+W<< 
+B>> play W D8
+B<< = 
+B<< 
+B>> genmove b
+B<< = G4
+B<< 
+W>> play B G4
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 77
+W<< y = 8
+W<< x = 5
+W<< new value = 53
+W<< = F9
+W<< 
+B>> play W F9
+B<< = 
+B<< 
+B>> genmove b
+B<< = J1
+B<< 
+W>> play B J1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 26
+W<< y = 2
+W<< x = 8
+W<< new value = 74
+W<< = J3
+W<< 
+B>> play W J3
+B<< = 
+B<< 
+B>> genmove b
+B<< = C8
+B<< 
+W>> play B C8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 73
+W<< y = 8
+W<< x = 1
+W<< new value = 17
+W<< = B9
+W<< 
+B>> play W B9
+B<< = 
+B<< 
+B>> genmove b
+B<< = D2
+B<< 
+W>> play B D2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 54
+W<< y = 6
+W<< x = 0
+W<< new value = 6
+W<< = A7
+W<< 
+B>> play W A7
+B<< = 
+B<< 
+B>> genmove b
+B<< = G1
+B<< 
+W>> play B G1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 28
+W<< y = 3
+W<< x = 1
+W<< new value = 12
+W<< = B4
+W<< 
+B>> play W B4
+B<< = 
+B<< 
+B>> genmove b
+B<< = F2
+B<< 
+W>> play B F2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 15
+W<< y = 1
+W<< x = 6
+W<< new value = 55
+W<< = G2
+W<< 
+B>> play W G2
+B<< = 
+B<< 
+B>> genmove b
+B<< = F3
+B<< 
+W>> play B F3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 18
+W<< y = 2
+W<< x = 0
+W<< new value = 2
+W<< = A3
+W<< 
+B>> play W A3
+B<< = 
+B<< 
+B>> genmove b
+B<< = J5
+B<< 
+W>> play B J5
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 16
+W<< y = 1
+W<< x = 7
+W<< new value = 64
+W<< = H2
+W<< 
+B>> play W H2
+B<< = 
+B<< 
+B>> genmove b
+B<< = J7
+B<< 
+W>> play B J7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 25
+W<< y = 2
+W<< x = 7
+W<< new value = 65
+W<< = H3
+W<< 
+B>> play W H3
+B<< = 
+B<< 
+B>> genmove b
+B<< = D1
+B<< 
+W>> play B D1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 0
+W<< y = 0
+W<< x = 0
+W<< new value = 0
+W<< = A1
+W<< 
+B>> play W A1
+B<< = 
+B<< 
+B>> genmove b
+B<< = G3
+B<< 
+W>> play B G3
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 68
+W<< y = 7
+W<< x = 5
+W<< new value = 52
+W<< = F8
+W<< 
+B>> play W F8
+B<< = 
+B<< 
+B>> genmove b
+B<< = G8
+B<< 
+W>> play B G8
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 74
+W<< y = 8
+W<< x = 2
+W<< new value = 26
+W<< = C9
+W<< 
+B>> play W C9
+B<< = 
+B<< 
+B>> genmove b
+B<< = G7
+B<< 
+W>> play B G7
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 57
+W<< y = 6
+W<< x = 3
+W<< new value = 33
+W<< = D7
+W<< 
+B>> play W D7
+B<< = 
+B<< 
+B>> genmove b
+B<< = F1
+B<< 
+W>> play B F1
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 49
+W<< y = 5
+W<< x = 4
+W<< new value = 41
+W<< = E6
+W<< 
+B>> play W E6
+B<< = 
+B<< 
+B>> genmove b
+B<< = C2
+B<< 
+W>> play B C2
+W<< = 
+W<< 
+W>> genmove w
+W<< value = 39
+W<< y = 4
+W<< x = 3
+W<< new value = 31
+W<< = D5
+W<< 
+B>> play W D5
+B<< = 
+B<< 
+B>> genmove b
+B<< = resign
+B<< 
+B>> quit
+W>> quit

@@ -1,0 +1,16 @@
+(;FF[4]CA[UTF-8]AP[gogui-twogtp:1.4.9]SZ[9]
+KM[0]PB[MyNoGo-black]PW[TCG-Judge]DT[2023-01-10]RE[B+R]
+C[Black command: ./nogo --shell --name="MyNoGo-black" --black="search=zero timeout=1000000"
+White command: ./nogo-judge --shell --name="Judge-Weak-White" --white="strong"
+Black version: 2022
+White version: 2022
+Result[Black\]: B+R
+Result[White\]: B+R
+Host: ? (12th Gen Intel(R) Core(TM) i7-12700)
+Date: January 10, 2023 at 1:11:41 AM CST]
+;B[ee];W[fa];B[ff];W[ad];B[fd];W[ed];B[df];W[ei];B[hi];W[ii]
+;B[bi];W[gi];B[ab];W[cf];B[ba];W[ch];B[cb];W[fg];B[da];W[dc]
+;B[bc];W[ah];B[cd];W[dg];B[fb];W[af];B[bg];W[fc];B[di];W[gf]
+;B[hg];W[ib];B[if];W[ie];B[gh];W[ai];B[hd];W[ea];B[ha];W[ia]
+;B[bf];W[bd];B[ag];W[ci];B[ac];W[cc];B[ic];W[ih];B[gb];W[db]
+;B[de];W[gd];B[hc];W[cg];B[fh];W[hf];B[hh])
