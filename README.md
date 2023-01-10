@@ -46,11 +46,11 @@ To specify custom player arguments (need to be implemented by yourself):
 ```bash
 ./nogo --total=1000 --black="search=MCTS timeout=1000" --white="search=alpha-beta depth=3"
 
-./nogo --total=10 --black="search=mc-rave timeout=1000000" --white=""
+./nogo --total=10 --black="search=mc-rave timeout=1000000" --white="search=zero timeout=5"
 
 ./nogo --total=10 --black="search=mc-rave timeout=1000000 nodeinit=true" --white=""
 
-./nogo --total=10 --black="search=mc-rave timeout=1000000 nodeinit=true" --white="search=mc-rave timeout=1000000"
+./nogo --total=10 --black="search=mc-rave timeout=1000000 nodeinit=true" --white="search=mc-rave timeout=5"
 
 ./nogo --total=10 --black="search=mc-rave timeout=1000000" --white="search=mc-rave timeout=1000000 nodeinit=true"
 ```

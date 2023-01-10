@@ -1,6 +1,7 @@
 import logging
 import math
 import numpy as np
+import time
 #import torch
 
 from nogopy.NogoGame import NogoGame
@@ -15,9 +16,12 @@ class pymcts:
         self.nnet.load_checkpoint('./nogopy/Weight/','best.pth.tar')
         self.cpuct = 1
         self.mctssimcnt = 200
+        self.totaltime = 270
+        self.timeleft = 270
+        self.step = 0
 
         self.name = "NogoGamer"
-        print('pymcts init')
+        #print('pymcts init')
         self.Qsa = {}  # stores Q values for s,a (as defined in the paper)
         self.Nsa = {}  # stores #times edge s,a was visited
         self.Ns = {}  # stores #times board s was visited
@@ -28,13 +32,25 @@ class pymcts:
         
 
     def predict(self, *args):
-        board = np.array(list(args), dtype=float)
+        time1 = time.time()
+        input_args = list(args)
+        board = np.array(input_args, dtype=float)
 
-        probs = np.argmax(self.getActionProb(board, temp=0))
-
+        self.step += 1
+        mexp = sum(self.game.getValidMoves(board, 1))
+        if mexp == 0:
+            return 0
+        if self.step <= 10:
+            timeout = 5
+        else:
+            timeout = self.timeleft/mexp
+        #print('Step {:d} : think time = {:.2f}'.format(self.step, timeout))
+        probs = np.argmax(self.getActionProb(board, temp=0, timeout=timeout))
+        time2 = time.time()
+        self.timeleft -= (time2-time1)
         return probs
 
-    def getActionProb(self, canonicalBoard, temp=1):
+    def getActionProb(self, canonicalBoard, temp=1, timeout=None):
         """
         This function performs numMCTSSims simulations of MCTS starting from
         canonicalBoard.
@@ -42,8 +58,15 @@ class pymcts:
             probs: a policy vector where the probability of the ith action is
                    proportional to Nsa[(s,a)]**(1./temp)
         """
-        for i in range(self.mctssimcnt):
-            self.search(canonicalBoard)
+        time1 = time.time()
+        if (timeout == None):
+            for i in range(self.mctssimcnt):
+                self.search(canonicalBoard)
+        else:
+            time2 = time.time()
+            while (time2-time1 <= timeout):
+                self.search(canonicalBoard)
+                time2 = time.time()
 
         s = self.game.stringRepresentation(canonicalBoard)
         counts = [self.Nsa[(s, a)] if (s, a) in self.Nsa else 0 for a in range(self.game.getActionSize())]

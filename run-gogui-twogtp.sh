@@ -1,18 +1,18 @@
 #!/bin/bash
 echo "GoGui-TwoGTP Launcher V20221101"
 # commands for player 1
-P1B='./nogo --shell --name="MyNoGo-black" --black="search=zero timeout=1000000"'
-P1W='./nogo --shell --name="MyNoGo-white" --white="search=zero timeout=1000000"'
+#P1B='./nogo --shell --name="My-Black" --black="search=zero"'
+#P1W='./nogo --shell --name="My-White" --white="search=zero"'
 # commands for local player 2
-P2B='./nogo-judge --shell --name="Judge-Weak-Black" --black="strong"'
-P2W='./nogo-judge --shell --name="Judge-Weak-White" --white="strong"'
+P1B='./nogo-judge --shell --name="Judge-Weak-Black" --black="strong"'
+P1W='./nogo-judge --shell --name="Judge-Weak-White" --white="strong"'
 # commands for remote player 2
-#P2B="gogui-client tcglinux1 10000"
-#P2W="gogui-client tcglinux1 10000"
+P2B='gogui-client 140.113.167.34 5566'
+P2W='gogui-client 140.113.167.34 5566'
 
 # other settings
 games=${1:-10} # total games to play
-timelimit=40 # total thinking time in second
+timelimit=300 # total thinking time in second
 configs="-size 9 -komi 0 -auto -games $((games/2)) -verbose" # gogui-twogtp
 
 # set up environment

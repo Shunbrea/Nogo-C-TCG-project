@@ -2,7 +2,7 @@
 #include <iostream>
 #include "board.h"
 #include "episode.h"
-#include "pynet.h"
+//#include "pynet.h"
 #include <tuple>
 #include <iostream>
 // #include "mcrave.h"
@@ -21,7 +21,7 @@ int main()
 
     // cout << thetree.root->state << endl;
     
-    for (size_t i=0; i<10; i++){
+    for (size_t i=0; i<50; i++){
         cout << ep.state() << endl;
         cout << ep.state().info().who_take_turns << endl;
 

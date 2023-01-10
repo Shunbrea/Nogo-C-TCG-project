@@ -136,6 +136,17 @@ public:
 		}
 	}
 
+	virtual void open_episode(const std::string& flag = "") {
+		if (algo == algorithms::zero){
+			pynet = new PyNNet;
+		}
+	}
+	virtual void close_episode(const std::string& flag = "") {
+		if (algo == algorithms::zero){
+			delete pynet;
+		}
+	}
+
 	virtual action take_action(const board& state) {
 		switch (algo) {
 			case (mcts):
@@ -160,7 +171,7 @@ public:
 				return MCravetree.mcravesearch(std::stoi(property("timeout")));
 			case (zero):
 			{
-				size_t act_ind = pynet.GetAction(state, who);
+				size_t act_ind = pynet->GetAction(state, who);
 				action::place pymove(act_ind, who);
 				return pymove;
 			}
@@ -177,7 +188,7 @@ private:
 	algorithms algo;
 	MctsTree MCtree;
 	McraveTree MCravetree;
-	PyNNet pynet;
+	PyNNet* pynet=0;
 
 protected:
 	std::default_random_engine engine;

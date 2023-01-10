@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "GoGui-Server Launcher V20211112"
 # command to launch
-player='./nogo --shell --name="Hollow" --black="search=mc-rave timeout=1000000" --white="search=mc-rave timeout=1000000"'
+player='./nogo --shell --name="56cantdie" --black="search=zero" --white="search=zero"'
 # port for binding
 port=${1:-auto}
 # display mode: states or commands
@@ -68,7 +68,7 @@ echo "Program: $player"
 [ "$monitor" ] && echo "Monitor: ./$monitor"
 echo "==============================="
 echo "Host: $(hostname) ($(curl -s --ipv4 ifconfig.io))"
-[[ $port =~ [0-9]+ ]] || port=6666
+[[ $port =~ [0-9]+ ]] || port=5566
 touch $stamp.{log,txt}
 while (( $port )); do
 	echo "Port: $port"

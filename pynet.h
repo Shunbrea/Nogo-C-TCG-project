@@ -17,12 +17,12 @@ public:
         PyRun_SimpleString("import sys");
         PyRun_SimpleString("sys.path.append(\".\")");
         pName = PyUnicode_DecodeFSDefault("nnet");
-        cerr << "PyNNet is init" << endl;
+        // cerr << "PyNNet is init" << endl;
         pModule = PyImport_Import(pName);
         if (pModule == NULL) { cerr << "pModule is NULL" << endl;}
         pCls = PyObject_GetAttrString(pModule, "pymcts");
         if (pCls == NULL) { cerr << "pCls is NULL" << endl;}
-        //pArgs = PyTuple_New(0);
+        // pArgs = PyTuple_New(0);
         pClsIns = PyObject_CallObject(pCls, nullptr);
         if (pClsIns == NULL) { cerr << "pClsIns is NULL" << endl;}
         pFunc = PyObject_GetAttrString(pClsIns, "predict");
